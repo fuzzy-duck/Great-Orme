@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Great Orme Touch Screen Structure</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="overview-panel">
+        <div>
+          <p class="eyebrow">Site Map Structure</p>
+          <h1>Great Orme Touch Screen</h1>
+          <p class="panel-copy">
+            Basic 1920 x 1080 screen structure based on the sitemap flow, supplied visuals, and final approved English copy.
+          </p>
+        </div>
+
+        <nav class="screen-nav" aria-label="Screen navigation">
+          <button class="screen-tab is-active" data-target="attractor">Attractor</button>
+          <button class="screen-tab" data-target="language">Language</button>
+          <button class="screen-tab" data-target="home">Home</button>
+          <button class="screen-tab" data-target="explore-map">Explore / Map</button>
+          <button class="screen-tab" data-target="discover">Discover</button>
+          <button class="screen-tab" data-target="info">Info Page</button>
+        </nav>
+
+        <div class="flow-card">
+          <p class="flow-title">Flow</p>
+          <p>Attractor -> Language -> Home -> Explore or Discover -> Info Page</p>
+        </div>
+      </aside>
+
+      <main class="stage-area">
+        <section class="screen is-visible" id="attractor">
+          <div class="stage-frame stage-frame--original stage-frame--attractor">
+            <div class="stage-overlay stage-overlay--hero">
+              <div class="hero-copy">
+                <p class="eyebrow">Attractor Screen</p>
+                <h2>The Great Orme touch-screen interactive tour</h2>
+                <p>
+                  Idle screen designed to draw visitors in before they choose a language and begin the interactive journey.
+                </p>
+                <button class="cta">Tap to start</button>
+              </div>
+              <div class="hero-pills" aria-hidden="true">
+                <span>Explore map</span>
+                <span>Discover stories</span>
+                <span>Wildlife</span>
+                <span>History</span>
+                <span>Geology</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="language">
+          <div class="stage-frame stage-frame--image">
+            <img src="assets/images/english-welsh.jpg" alt="Language selection visual" />
+            <div class="screen-caption">Choose language</div>
+          </div>
+        </section>
+
+        <section class="screen" id="home">
+          <div class="stage-frame stage-frame--original stage-frame--home">
+            <div class="home-header">
+              <p class="eyebrow">Main Menu</p>
+              <h2>You are standing near the summit of one of Wales' most spectacular Country Parks.</h2>
+              <p class="home-intro">
+                Over half a million visitors come here each year to admire the beautiful scenery and catch a glimpse of the rare species of wildlife, both animals and plants, which can only be found here.
+              </p>
+              <p class="home-intro">
+                Use the maps to <strong>EXPLORE</strong> the Great Orme's many attractions, or join our Country Park Warden to <strong>DISCOVER</strong> some of the Great Orme's secrets.
+              </p>
+            </div>
+            <div class="choice-grid">
+              <article class="choice-card choice-card--explore">
+                <span class="choice-label">Explore</span>
+                <h3>Interactive map</h3>
+                <p>Map-led route with seasonal, category and point-of-interest hotspots.</p>
+                <ul class="choice-list">
+                  <li>Wildlife</li>
+                  <li>Geology</li>
+                  <li>History</li>
+                  <li>Attractions</li>
+                  <li>Places to Eat</li>
+                </ul>
+              </article>
+              <article class="choice-card choice-card--discover">
+                <span class="choice-label">Discover</span>
+                <h3>Topic journeys</h3>
+                <p>Warden-led content flow with questions, answers and deeper story pages.</p>
+                <ul class="choice-list">
+                  <li>Discover Geology</li>
+                  <li>Discover History</li>
+                  <li>Discover Wildlife</li>
+                </ul>
+              </article>
+            </div>
+            <div class="home-footer">
+              <div class="legend-pill">Map</div>
+              <div class="legend-pill">Choose Category</div>
+              <div class="legend-pill">Things to Do</div>
+              <div class="legend-pill">Places to Eat</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="explore-map">
+          <div class="stage-frame stage-frame--image">
+            <img src="assets/images/map-page.jpg" alt="Interactive map visual" />
+            <div class="annotation annotation--left">
+              <h3>Explore path</h3>
+              <p>Users can turn categories on and off, then jump into location-based stories from the map.</p>
+            </div>
+            <div class="content-card content-card--right">
+              <p class="content-card__eyebrow">Explore categories</p>
+              <p>Wildlife</p>
+              <p>Geology</p>
+              <p>History</p>
+              <p>Attractions / Things to Do</p>
+              <p>Places to Eat</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="discover">
+          <div class="stage-frame stage-frame--image">
+            <img src="assets/images/category-screen.jpg" alt="Category selection visual" />
+            <div class="annotation annotation--right">
+              <h3>Discover path</h3>
+              <p>Category-driven entry point for Geology, History and Wildlife, with supporting attraction and food listings in the broader experience.</p>
+            </div>
+            <div class="content-card content-card--left">
+              <p class="content-card__eyebrow">Final titles</p>
+              <p>Map</p>
+              <p>Choose Language</p>
+              <p>Choose Category</p>
+              <p>Geology</p>
+              <p>History</p>
+              <p>Wildlife</p>
+              <p>Things to Do</p>
+              <p>Attractions</p>
+              <p>Places to Eat</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="info">
+          <div class="stage-frame stage-frame--image">
+            <img src="assets/images/ranger-screen.jpg" alt="Information page visual" />
+            <div class="annotation annotation--bottom annotation--wide">
+              <h3>Discover Geology: Intro Page 1</h3>
+              <p>
+                The Great Orme is a spectacular headland 3 km long and 207 metres high, formed from rock created over 300 million years ago and shaped by the forces of nature ever since.
+              </p>
+              <p>
+                We call the study of rocks geology, and the Great Orme has many nationally important geological features: let's take a tour through those 300 million years.
+              </p>
+              <p class="question-line">
+                Q1: Do you think that the Great Orme is the remains of an extinct volcano, or the remains of millions of tiny sea creatures?
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
