@@ -9,12 +9,6 @@
         box-sizing: border-box;
       }
 
-      :root {
-        --screen-width: 1920;
-        --screen-height: 1080;
-        --frame-padding: 24px;
-      }
-
       html,
       body {
         height: 100%;
@@ -25,87 +19,18 @@
         display: grid;
         place-items: center;
         overflow: auto;
-        background: #ffffff;
-        font-family: Montserrat, Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: #12303b;
+        background: #111111;
       }
 
-      .preview-shell {
-        display: grid;
-        gap: 18px;
-        justify-items: center;
-        padding: 32px;
-        width: 100%;
-      }
-
-      .preview-label {
-        margin: 0;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: rgba(18, 48, 59, 0.72);
-      }
-
-      .device-frame {
-        padding: var(--frame-padding);
-        border-radius: 40px;
-        background: #000000;
-        box-shadow:
-          0 28px 90px rgba(18, 48, 59, 0.22),
-          inset 0 1px 0 rgba(255, 255, 255, 0.16);
-      }
-
-      .device-viewport {
-        width: calc(var(--screen-width) * 1px);
-        height: calc(var(--screen-height) * 1px);
-        transform-origin: top center;
-      }
-
-      .device-screen {
-        width: calc(var(--screen-width) * 1px);
-        height: calc(var(--screen-height) * 1px);
+      .preview-screen {
+        width: 1920px;
+        height: 1080px;
         border: 0;
-        border-radius: 20px;
-        background: #97d0e1;
         display: block;
-      }
-
-      @media (max-width: 2048px), (max-height: 1240px) {
-        .device-viewport {
-          transform: scale(var(--preview-scale, 1));
-        }
       }
     </style>
   </head>
   <body>
-    <main class="preview-shell">
-      <p class="preview-label">Client Preview • Fixed 1920 × 1080</p>
-      <div class="device-frame">
-        <div class="device-viewport" id="deviceViewport">
-          <iframe class="device-screen" src="index.html" title="Great Orme client preview"></iframe>
-        </div>
-      </div>
-    </main>
-    <script>
-      const root = document.documentElement;
-      const viewport = document.getElementById('deviceViewport');
-      const screenWidth = 1920;
-      const screenHeight = 1080;
-      const framePadding = 48;
-      const shellPadding = 64;
-      const labelHeight = 40;
-
-      function updateScale() {
-        const availableWidth = window.innerWidth - shellPadding - framePadding;
-        const availableHeight = window.innerHeight - shellPadding - framePadding - labelHeight;
-        const scale = Math.min(1, availableWidth / screenWidth, availableHeight / screenHeight);
-        root.style.setProperty('--preview-scale', scale.toFixed(4));
-        viewport.style.marginBottom = `${screenHeight * (scale - 1)}px`;
-      }
-
-      updateScale();
-      window.addEventListener('resize', updateScale);
-    </script>
+    <iframe class="preview-screen" src="index.html" title="Great Orme client preview"></iframe>
   </body>
 </html>
