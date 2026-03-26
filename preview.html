@@ -18,13 +18,14 @@
       body {
         display: grid;
         place-items: center;
-        overflow: auto;
+        overflow: hidden;
         background: #111111;
       }
 
       .preview-screen {
-        width: 1920px;
-        height: 1080px;
+        width: min(100vw, calc(100vh * 16 / 9));
+        aspect-ratio: 16 / 9;
+        height: auto;
         border: 0;
         display: block;
       }
