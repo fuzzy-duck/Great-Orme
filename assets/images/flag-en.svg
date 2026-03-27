@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 36" role="img" aria-labelledby="title">
+  <title>English toggle flag</title>
+  <rect width="60" height="36" fill="#012169"/>
+  <polygon points="0,0 7,0 60,28 60,36 53,36 0,8" fill="#ffffff"/>
+  <polygon points="60,0 53,0 0,28 0,36 7,36 60,8" fill="#ffffff"/>
+  <polygon points="0,0 3.5,0 60,30.5 60,36 56.5,36 0,5.5" fill="#c8102e"/>
+  <polygon points="60,0 56.5,0 0,30.5 0,36 3.5,36 60,5.5" fill="#c8102e"/>
+  <rect x="24" width="12" height="36" fill="#ffffff"/>
+  <rect y="12" width="60" height="12" fill="#ffffff"/>
+  <rect x="26" width="8" height="36" fill="#c8102e"/>
+  <rect y="14" width="60" height="8" fill="#c8102e"/>
+</svg>

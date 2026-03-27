@@ -43,16 +43,24 @@ function createLanguageToggle(screen) {
   const englishButton = document.createElement('button');
   englishButton.type = 'button';
   englishButton.className = `language-toggle__button${isWelsh ? '' : ' is-active'}`;
-  englishButton.textContent = 'EN';
+  englishButton.setAttribute('aria-label', 'Switch to English');
   englishButton.disabled = !isWelsh;
   englishButton.addEventListener('click', () => activateScreen(englishTarget));
+  const englishFlag = document.createElement('img');
+  englishFlag.src = 'assets/images/flag-en.svg';
+  englishFlag.alt = 'English';
+  englishButton.append(englishFlag);
 
   const welshButton = document.createElement('button');
   welshButton.type = 'button';
   welshButton.className = `language-toggle__button${isWelsh ? ' is-active' : ''}`;
-  welshButton.textContent = 'CY';
+  welshButton.setAttribute('aria-label', 'Switch to Welsh');
   welshButton.disabled = isWelsh;
   welshButton.addEventListener('click', () => activateScreen(welshTarget));
+  const welshFlag = document.createElement('img');
+  welshFlag.src = 'assets/images/flag-cy.svg';
+  welshFlag.alt = 'Cymraeg';
+  welshButton.append(welshFlag);
 
   toggle.append(englishButton, welshButton);
   stageFrame.append(toggle);
