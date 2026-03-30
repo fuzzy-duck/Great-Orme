@@ -6,6 +6,7 @@ const answerOptions = document.querySelectorAll('.answer-option');
 const stageRoot = document.documentElement;
 const stageArea = document.querySelector('.stage-area');
 const languageToggleEligibleScreens = Array.from(screens).filter((screen) => !['attractor', 'language'].includes(screen.id));
+const draggableDebugBlocks = document.querySelectorAll('.test-page-copy, .home-header');
 
 function getLanguageTarget(screenId, language) {
   const isWelsh = screenId.endsWith('-cy');
@@ -64,6 +65,56 @@ function createLanguageToggle(screen) {
 
   toggle.append(englishButton, welshButton);
   stageFrame.append(toggle);
+}
+
+function updateDebugDragLabel(block, label) {
+  const dx = parseFloat(block.style.getPropertyValue('--debug-dx')) || 0;
+  const dy = parseFloat(block.style.getPropertyValue('--debug-dy')) || 0;
+  label.textContent = `${block.dataset.debugName} x:${Math.round(dx)} y:${Math.round(dy)}`;
+}
+
+function makeBlockDraggable(block) {
+  block.classList.add('debug-draggable');
+  block.dataset.debugName = block.classList.contains('test-page-copy') ? 'text block' : 'header block';
+
+  const label = document.createElement('div');
+  label.className = 'debug-drag-label';
+  block.prepend(label);
+  updateDebugDragLabel(block, label);
+
+  let startX = 0;
+  let startY = 0;
+  let originX = 0;
+  let originY = 0;
+
+  function onPointerMove(event) {
+    const dx = originX + (event.clientX - startX);
+    const dy = originY + (event.clientY - startY);
+    block.style.setProperty('--debug-dx', `${dx}px`);
+    block.style.setProperty('--debug-dy', `${dy}px`);
+    updateDebugDragLabel(block, label);
+  }
+
+  function onPointerUp() {
+    block.classList.remove('is-dragging');
+    window.removeEventListener('pointermove', onPointerMove);
+    window.removeEventListener('pointerup', onPointerUp);
+  }
+
+  block.addEventListener('pointerdown', (event) => {
+    if (event.target.closest('button')) {
+      return;
+    }
+
+    startX = event.clientX;
+    startY = event.clientY;
+    originX = parseFloat(block.style.getPropertyValue('--debug-dx')) || 0;
+    originY = parseFloat(block.style.getPropertyValue('--debug-dy')) || 0;
+
+    block.classList.add('is-dragging');
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', onPointerUp);
+  });
 }
 
 function fitStageToViewport() {
@@ -166,4 +217,5 @@ answerOptions.forEach((option) => {
 
 fitStageToViewport();
 languageToggleEligibleScreens.forEach(createLanguageToggle);
+draggableDebugBlocks.forEach(makeBlockDraggable);
 window.addEventListener('resize', fitStageToViewport);
