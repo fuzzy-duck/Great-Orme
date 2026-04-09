@@ -436,9 +436,88 @@ function fitStageToViewport() {
     : 0;
   const availableWidth = Math.max(window.innerWidth - horizontalPadding, 320);
   const availableHeight = Math.max(window.innerHeight - verticalPadding, 180);
-  const scale = Math.min(availableWidth / stageWidth, availableHeight / stageHeight, 1);
+  const scale = Math.max(availableWidth / stageWidth, availableHeight / stageHeight);
 
   stageRoot.style.setProperty('--stage-scale', `${scale}`);
+}
+
+function addQuestionProgressLabels() {
+  const questionProgressConfig = [
+    { prefix: 'history-test', total: 10 },
+    { prefix: 'info', total: 7 }
+  ];
+
+  screens.forEach((screen) => {
+    const copyBlock = screen.querySelector('.test-page-copy');
+    if (!copyBlock) {
+      return;
+    }
+
+    const matchedConfig = questionProgressConfig.find(({ prefix }) => (
+      screen.id === prefix ||
+      screen.id.startsWith(`${prefix}-`)
+    ));
+
+    if (!matchedConfig || copyBlock.querySelector('.question-progress')) {
+      return;
+    }
+
+    const baseId = screen.id.replace(/-cy$/, '');
+    const suffix = baseId === matchedConfig.prefix
+      ? 1
+      : Number.parseInt(baseId.replace(`${matchedConfig.prefix}-`, ''), 10);
+
+    if (!Number.isFinite(suffix)) {
+      return;
+    }
+
+    const progress = document.createElement('span');
+    progress.className = 'question-progress';
+    progress.textContent = `${suffix} of ${matchedConfig.total}`;
+    copyBlock.appendChild(progress);
+  });
+}
+
+function openStoryMap(screenId, mapSetName) {
+  activateScreen(screenId);
+
+  const mapScreen = document.getElementById(screenId);
+  const mapFrame = mapScreen?.querySelector('.stage-frame[data-map-set]');
+  if (mapFrame && mapSetName) {
+    setMapSet(mapFrame, mapSetName);
+    dismissMapOverlay(mapFrame);
+  }
+}
+
+function addStoryMapHotspots() {
+  screens.forEach((screen) => {
+    const stageFrame = screen.querySelector('.stage-frame--test');
+    if (!stageFrame || stageFrame.querySelector('.story-map-hotspot')) {
+      return;
+    }
+
+    const isHistoryScreen = screen.id.startsWith('history-test');
+    const isGeologyScreen = screen.id.startsWith('info');
+
+    if (!isHistoryScreen && !isGeologyScreen) {
+      return;
+    }
+
+    const hotspot = document.createElement('button');
+    hotspot.type = 'button';
+    hotspot.className = 'story-map-hotspot';
+    hotspot.setAttribute(
+      'aria-label',
+      isHistoryScreen ? 'Open history map' : 'Open geology map'
+    );
+
+    hotspot.addEventListener('click', () => {
+      const targetScreenId = screen.id.endsWith('-cy') ? 'explore-map-cy' : 'explore-map';
+      openStoryMap(targetScreenId, isHistoryScreen ? 'history' : 'geology');
+    });
+
+    stageFrame.appendChild(hotspot);
+  });
 }
 
 function activateScreen(targetId) {
@@ -608,6 +687,8 @@ answerOptions.forEach((option) => {
 fitStageToViewport();
 languageToggleEligibleScreens.forEach(createLanguageToggle);
 addQuestionImagePlaceholders();
+addQuestionProgressLabels();
+addStoryMapHotspots();
 document.querySelectorAll('.stage-frame[data-map-set]').forEach((stageFrame) => {
   setMapSet(stageFrame, stageFrame.dataset.mapSet || 'wildlife');
 });

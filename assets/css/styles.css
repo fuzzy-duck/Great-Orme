@@ -294,11 +294,148 @@ h1 {
   font: 700 1.55rem/1.4 "Avenir Next", "Gill Sans", sans-serif;
 }
 
+.question-progress {
+  position: absolute;
+  right: 32px;
+  bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .screen:is([id^="history-test"], [id^="info"]) .test-page-copy {
   padding: 28px 32px 36px;
-  background: rgba(255, 244, 176, 0.82);
   border-radius: 24px;
   width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#info-3, #info-3-cy) .test-page-copy {
+  top: 235px;
+  padding: 0 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#history-test-2, #history-test-2-cy) .test-page-copy {
+  top: 193px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#history-test-3, #history-test-3-cy) .test-page-copy {
+  top: 244px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#history-test-4, #history-test-4-cy) .test-page-copy {
+  top: 136px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#history-test-5, #history-test-5-cy) .test-page-copy {
+  top: 155px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#history-test-6, #history-test-6-cy) .test-page-copy {
+  top: 146px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#history-test-7, #history-test-7-cy) .test-page-copy {
+  top: 231px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#history-test-8, #history-test-8-cy) .test-page-copy {
+  top: 169px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#history-test-9, #history-test-9-cy) .test-page-copy {
+  top: 153px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#history-test-10, #history-test-10-cy) .test-page-copy {
+  top: 229px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#info, #info-cy) .test-page-copy {
+  top: 246px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#info-2, #info-2-cy) .test-page-copy {
+  top: 172px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#info-4, #info-4-cy) .test-page-copy {
+  top: 211px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#info-5, #info-5-cy) .test-page-copy {
+  top: 187px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#info-6, #info-6-cy) .test-page-copy {
+  top: 135px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1094px;
+  height: 485px;
+}
+
+.screen:is(#info-7, #info-7-cy) .test-page-copy {
+  top: 232px;
+  padding: 28px 32px 36px;
+  border-radius: 24px;
+  width: 1123px;
   height: 485px;
 }
 
@@ -317,7 +454,7 @@ h1 {
   background: transparent;
   color: #111111;
   font: 1.55rem/1.3 "Avenir Next", "Gill Sans", sans-serif;
-  text-transform: lowercase;
+  text-transform: capitalize;
   cursor: pointer;
 }
 
@@ -602,12 +739,12 @@ h1 {
 }
 
 .map-mode-toggle__button {
-  border: 2px solid #356f2f;
+  border: 2px solid #78a96d;
   border-radius: 999px;
   min-width: 300px;
   min-height: 150px;
   padding: 36px 54px;
-  background: #356f2f;
+  background: #78a96d;
   color: #ffffff;
   font: 700 3.3rem/1 "Avenir Next Condensed", "Gill Sans", sans-serif;
   letter-spacing: 0.08em;
@@ -619,7 +756,7 @@ h1 {
 .map-mode-toggle__button:hover,
 .map-mode-toggle__button:focus-visible {
   transform: translateY(-1px);
-  border-color: #356f2f;
+  border-color: #78a96d;
   color: #ffffff;
 }
 
@@ -702,12 +839,12 @@ h1 {
 }
 
 .map-mode-toolbar__button {
-  border: 2px solid #356f2f;
+  border: 2px solid #78a96d;
   border-radius: 999px;
   min-width: 160px;
   min-height: 64px;
   padding: 14px 24px;
-  background: #356f2f;
+  background: #78a96d;
   color: #ffffff;
   font: 700 1.45rem/1 "Avenir Next Condensed", "Gill Sans", sans-serif;
   letter-spacing: 0.08em;
@@ -723,6 +860,9 @@ h1 {
 
 .map-mode-toolbar__button.is-active {
   opacity: 1;
+  border-color: #356f2f;
+  background: #356f2f;
+  color: #ffffff;
 }
 
 .map-info-panel {
@@ -1123,6 +1263,20 @@ h1 {
   bottom: 0.8%;
   width: 12.5%;
   height: 19%;
+}
+
+.story-map-hotspot {
+  position: absolute;
+  top: 16.5%;
+  right: 2.8%;
+  width: 20%;
+  height: 43%;
+  z-index: 2;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  outline: 0;
+  cursor: pointer;
 }
 
 .overview-panel {
