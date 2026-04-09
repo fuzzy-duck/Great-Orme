@@ -134,9 +134,9 @@ const geologyMapCopy = {
     ]
   },
   3: {
-    title: 'The Great Orme Copper Mine',
+    title: 'Rock Contours',
     body: [
-      'Visit the Great Orme Ancient Mines, explore some of the Bronze Age tunnels, and discover how the Bronze Age miners lit fires deep underground to shatter the rock and work the seams of copper ore with primitive stone hammers and animal bones or even antlers as picks.'
+      'These layers of rock have been twisted and tilted by underground volcanic forces. As the sea wore away the cliff face, the layers, or “stratifications”, have been revealed.'
     ]
   },
   4: {
@@ -177,6 +177,222 @@ const wildlifeSummerCopy = {
     title: 'Summer Icon 4',
     body: [
       'Beginning to flower in late spring and continuing throughout the first 2 months of summer, rose pink thrift plants carpet the grasslands.'
+    ]
+  },
+  5: {
+    title: 'Summer Icon 5',
+    body: [
+      'The grayling butterfly is a master of disguise. The sub-species found on the Great Orme is unique; it cannot be found anywhere else!'
+    ]
+  },
+  6: {
+    title: 'Summer Icon 6',
+    body: [
+      'The silver-studded blue butterfly is small but beautiful, and the sub-species seen here is unique to the Great Orme.'
+    ]
+  },
+  7: {
+    title: 'Summer Icon 7',
+    body: [
+      'Listen for the call of the Great Orme’s resident stonechats among the gorse bushes: distinctive clicks that sound like stones tapped together, giving the bird its name.'
+    ]
+  }
+};
+
+const wildlifeSpringCopy = {
+  1: {
+    title: 'Spring Icon 1',
+    body: [
+      'As nature wakes up after the winter, spring marks the arrival of goat kids on the Great Orme. Usually difficult to spot, watch out for them if you see a group of nanny goats (females), but please don’t disturb them.',
+      'These are Kashmir goats, much prized for their wool, acquired from Queen Victoria’s Royal herd by Major General Sir Savage Mostyn, and brought here in the 1900s; they have roamed wild ever since.'
+    ]
+  },
+  2: {
+    title: 'Spring Icon 2',
+    body: [
+      'Spring sees our biggest visitor numbers: but these visitors come all the way from Africa! Ring Ouzels, Tree Pipits and Whinchats stop here to “refuel” as they follow the spring migration north.',
+      'Swallows, Wheatears and Willow Warblers complete their migration here, settling on the Great Orme to breed each summer.'
+    ]
+  },
+  3: {
+    title: 'Spring Icon 3',
+    body: [
+      'Cotoneaster cambricus or the ‘Great Orme berry’ is found nowhere else but on limestone cliffs of the Great Orme and is Critically Endangered.',
+      'It has small white flowers in spring and berries like miniature apples in the autumn. It is these berries that give the plant its Welsh name, Craig Afal (Rock Apple).'
+    ]
+  },
+  4: {
+    title: 'Spring Icon 4',
+    body: [
+      'Other rare wildflowers include spring cinquefoil, spring sandwort and hutchinsia.',
+      'Thrift can be seen carpeting areas of grassland and sea cliffs towards the end of spring.'
+    ]
+  },
+  5: {
+    title: 'Spring Icon 5',
+    body: [
+      'On the northern side of the Great Orme are relics of the woodland that once grew on many parts of the headland. Plants like violets, wood sorrel, wood anemones and primroses now thrive under a canopy of bracken.',
+      'This habitat provides an important refuge for woodland plants and the insects that rely on them.'
+    ]
+  }
+};
+
+const wildlifeAutumnCopy = {
+  1: {
+    title: 'Autumn Icon 1',
+    body: [
+      'In the autumn you can see the billy goats clashing horns to compete for the attention of the nanny goats.'
+    ]
+  },
+  2: {
+    title: 'Autumn Icon 2',
+    body: [
+      'Ring ouzels, tree pipits and whinchats can be seen feeding during their autumn migration as they stop to refuel on their way south to Africa for the winter.'
+    ]
+  },
+  3: {
+    title: 'Autumn Icon 3',
+    body: [
+      'Now is the time to see the small red berries of the wild cotoneaster on the limestone cliffs.'
+    ]
+  },
+  4: {
+    title: 'Autumn Icon 4',
+    body: [
+      'The woodlands are rich with mosses, fungi and lichens, and red campion flowers can be seen up to October.'
+    ]
+  }
+};
+
+const wildlifeWinterCopy = {
+  1: {
+    title: 'Winter Icon 1',
+    body: [
+      'Winter sees the arrival of birds from Northern Europe and the Arctic such as the snow bunting, which searches for seeds on the generally snow-free ground as it over-winters here.'
+    ]
+  },
+  2: {
+    title: 'Winter Icon 2',
+    body: [
+      'Lady ferns and harts-tongue ferns can be seen in the cracks of the limestone pavement.'
+    ]
+  },
+  3: {
+    title: 'Winter Icon 3',
+    body: [
+      'Hardy domestic sheep will be out in all weathers, and so will our Country Park Wardens; the heathlands are cut every winter to encourage new seedlings and fresh ground cover.'
+    ]
+  }
+};
+
+const wildlifeAttractionsCopy = {
+  1: {
+    title: 'Ski Slope and Snowboard Centre',
+    body: [
+      'With the longest toboggan run in Britain and a scenic PermaSnow ski slope, the centre offers skiing, snowboarding, toboggan & sno-tubing with a fully licensed Alpine Lodge Bar & Restaurant.',
+      'Open 10am - 10pm',
+      'http://jnllandudno.co.uk',
+      '01492 874707'
+    ]
+  },
+  2: {
+    title: 'The Great Orme Ancient Mine',
+    body: [
+      'The copper mines date back to the Bronze Age, and are one of the most astounding archaeological discoveries of recent times.',
+      'Open daily mid-March to end of October',
+      'Open 10am - last tour 4:30pm',
+      'http://www.greatormemines.info/',
+      '01492 870447'
+    ]
+  },
+  3: {
+    title: 'The Cable Car',
+    body: [
+      'Running from Happy Valley to the Great Orme Summit, the Cable Car reveals many magnificent views, and at one mile from end to end, is the longest aerial cabin lift in the United Kingdom.',
+      'http://www.greatorme.org.uk/cablecar.html'
+    ]
+  },
+  4: {
+    title: 'The Tramway',
+    body: [
+      'Great Britain\'s only remaining cable operated street tramway runs from Victoria Station in Church Walks, Llandudno, to the Great Orme Summit, with passengers changing cars at the Halfway Station.',
+      'Open mid-March to early November 10am - 5.45pm daily',
+      'http://www.greatormetramway.co.uk/',
+      '01492 577877'
+    ]
+  },
+  5: {
+    title: 'The Olde Victorian Picture House',
+    body: [
+      'Create your unforgettable holiday picture with costumes, a studio with a variety of themes and modern technology used to re-create, perfectly, the atmosphere of days gone by. Part of the Summit Complex.',
+      'Open daily 11am - 5pm from mid March to early November',
+      'http://www.theoldevictorianpicturehouse.co.uk/',
+      '01492 860870'
+    ]
+  },
+  6: {
+    title: 'Rocky Pines Adventure Golf',
+    body: [
+      'Part of the Summit Complex, Rocky Pines Adventure Golf is an 18-hole course providing spectacular views of the dramatic North Wales coast.',
+      'Open daily 11am - 5pm from mid March to early November',
+      'http://www.theoldevictorianpicturehouse.co.uk/golf.htm',
+      '01492 860870'
+    ]
+  },
+  7: {
+    title: 'Great Orme Family Golf',
+    body: [
+      'The only full sized 9-hole golf course in North Wales, with spectacular views and fun for the whole family.',
+      'Open daily 10am-dusk',
+      'www.Ormegolf.blogspot.com',
+      '07990 517020'
+    ]
+  },
+  8: {
+    title: 'Marine Drive',
+    body: [
+      'A 4 1/2 mile scenic drive around the Great Orme headland, from Llandudno\'s North Shore to Llandudno\'s West Shore, with wonderful views in all directions.',
+      '£2.50 per car (which also covers parking at the summit of the Great Orme)'
+    ]
+  }
+};
+
+const wildlifeEatCopy = {
+  1: {
+    title: 'The Summit Complex',
+    body: [
+      'The Summit Complex consists of a cafe / restaurant and boxing themed bar with breath-taking views.'
+    ]
+  },
+  2: {
+    title: 'Rest and be Thankful Cafe',
+    body: [
+      'As well as serving rolls, cakes, drinks, ice creams and many other delightful treats, the Cafe also acts as an information centre for the Great Orme and maintains a large range of photograph albums and specialist publications.',
+      'http://www.restandbethankful.net/'
+    ]
+  },
+  3: {
+    title: 'Alpine Lodge',
+    body: [
+      'The Alpine Lodge bar and restaurant provides panoramic views of the main ski slope, toboggan track, Alpine Adventure Golf course and Llandudno bay.',
+      'http://jnllandudno.co.uk',
+      '01492 874707'
+    ]
+  },
+  4: {
+    title: 'Parisella’s Cafeteria',
+    body: [
+      'Set in Happy Valley gardens, Parisella’s Cafeteria provides drinks, cakes, hot meals and Parisella’s own ice cream.',
+      'www.parisellasicecream.co.uk',
+      '01492 592448'
+    ]
+  },
+  5: {
+    title: 'Haulfre Gardens Tea Rooms',
+    body: [
+      'A traditional tea room set in the beautiful and relaxing location of Haulfre Gardens, serving homemade cakes, scones and bara brith. A sheltered sun-trap, with panoramic views across Llandudno including the West Shore and Conwy Estuary.',
+      'Open daily 10am-7pm',
+      '01492 87673'
     ]
   }
 };
@@ -285,7 +501,16 @@ function showMapInfoPanel(stageFrame, title, paragraphs, imageSrc = '', panelCla
 
   paragraphs.forEach((paragraph) => {
     const paragraphNode = document.createElement('p');
-    paragraphNode.textContent = paragraph;
+    const labelMatch = paragraph.match(/^([^:]+:)\s*(.*)$/);
+
+    if (labelMatch) {
+      const labelNode = document.createElement('strong');
+      labelNode.textContent = labelMatch[1];
+      paragraphNode.append(labelNode, ` ${labelMatch[2]}`);
+    } else {
+      paragraphNode.textContent = paragraph;
+    }
+
     panelBody.append(paragraphNode);
   });
 
@@ -577,6 +802,17 @@ mapHotspots.forEach((hotspot) => {
     if (mapImage) {
       const mapSetName = stageFrame.dataset.mapSet || 'wildlife';
       const imageIndex = Number(hotspot.dataset.mapIndex || 0);
+
+      if (mapSetName === 'wildlife' && imageIndex === 2) {
+        setMapSet(stageFrame, 'geology', 1);
+        return;
+      }
+
+      if (mapSetName === 'wildlife' && imageIndex === 3) {
+        setMapSet(stageFrame, 'history', 1);
+        return;
+      }
+
       stageFrame.dataset.mapImageIndex = `${imageIndex}`;
       mapImage.src = getMapImageSrc(mapSetName, imageIndex);
 
@@ -611,7 +847,17 @@ mapDetailHotspots.forEach((hotspot) => {
 
     const panelCopy = detailSet === 'wildlife-summer'
       ? wildlifeSummerCopy[detailKey]
-      : null;
+      : detailSet === 'wildlife-spring'
+        ? wildlifeSpringCopy[detailKey]
+        : detailSet === 'wildlife-autumn'
+          ? wildlifeAutumnCopy[detailKey]
+          : detailSet === 'wildlife-winter'
+            ? wildlifeWinterCopy[detailKey]
+            : detailSet === 'wildlife-attractions'
+              ? wildlifeAttractionsCopy[detailKey]
+              : detailSet === 'wildlife-eat'
+                ? wildlifeEatCopy[detailKey]
+        : null;
 
     if (stageFrame && panelCopy) {
       showMapInfoPanel(
@@ -660,14 +906,20 @@ answerOptions.forEach((option) => {
 
     const optionsInGroup = group.querySelectorAll('.answer-option');
     optionsInGroup.forEach((item) => {
-      item.classList.remove('is-selected', 'is-correct', 'is-incorrect');
+      item.classList.remove('is-selected', 'is-correct', 'is-incorrect', 'is-correct-answer');
     });
 
     option.classList.add('is-selected');
 
     const isCorrect = option.dataset.correct === 'true';
+    const correctOption = group.querySelector('[data-correct="true"]');
 
-    option.classList.add(isCorrect ? 'is-correct' : 'is-incorrect');
+    if (isCorrect) {
+      option.classList.add('is-correct');
+    } else {
+      option.classList.add('is-incorrect');
+      correctOption?.classList.add('is-correct-answer');
+    }
 
     let feedback = group.nextElementSibling;
     if (!feedback || !feedback.classList.contains('answer-feedback')) {
@@ -679,8 +931,8 @@ answerOptions.forEach((option) => {
     feedback.classList.toggle('is-correct', isCorrect);
     feedback.classList.toggle('is-incorrect', !isCorrect);
     feedback.textContent = isCorrect
-      ? 'Correct.'
-      : `Incorrect. The correct answer is ${group.querySelector('[data-correct="true"] span')?.textContent ?? ''}.`;
+      ? 'Correct answer selected.'
+      : '';
   });
 });
 
