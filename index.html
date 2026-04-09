@@ -81,12 +81,31 @@
         </section>
 
         <section class="screen" id="explore-map">
-          <div class="stage-frame stage-frame--image">
+          <div class="stage-frame stage-frame--image" data-map-set="wildlife">
             <img
               data-map-image="true"
               src="assets/images/map-page.png"
               alt="Interactive map visual"
             />
+            <button class="map-back-overlay" data-target-screen="discover" type="button" aria-label="Back to category page">
+              <img src="assets/images/back_overlay_2.png" alt="" />
+            </button>
+            <div class="map-mode-toggle" role="group" aria-label="Choose map">
+              <div class="map-mode-toggle__intro">
+                <h2>Discover the Wildlife of the Great Orme</h2>
+                <p>
+                  The Great Orme is a Country Park, a nationally important Site of Special Scientific Interest and has international status as a Special Area of Conservation. The headland offers a rich variation in habitats and some of the plants and animals you can see here are unique to the Great Orme.
+                </p>
+              </div>
+              <button class="map-mode-toggle__button is-active" data-map-set-target="wildlife" type="button">Wildlife</button>
+              <button class="map-mode-toggle__button" data-map-set-target="geology" type="button">Geology</button>
+              <button class="map-mode-toggle__button" data-map-set-target="history" type="button">History</button>
+            </div>
+            <div class="map-mode-toolbar" role="group" aria-label="Switch map">
+              <button class="map-mode-toolbar__button is-active" data-map-set-target="wildlife" type="button">Wildlife</button>
+              <button class="map-mode-toolbar__button" data-map-set-target="geology" type="button">Geology</button>
+              <button class="map-mode-toolbar__button" data-map-set-target="history" type="button">History</button>
+            </div>
             <button
               class="map-back-hotspot"
               data-target-screen="discover"
@@ -98,15 +117,31 @@
               aria-label="Back to home page"
             ></button>
             <div class="map-legend-hotspots" aria-label="Map category and season hotspots">
-              <button class="map-hotspot" data-image-src="assets/images/map-page_eat.png" aria-label="Places to eat"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_geology.png" aria-label="Geology"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_history.png" aria-label="History"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_attractions.png" aria-label="Attractions"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_spring.png" aria-label="Spring"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_summer.png" aria-label="Summer"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_autumn.png" aria-label="Autumn"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_winter.png" aria-label="Winter"></button>
+              <button class="map-hotspot" data-map-index="1" aria-label="Places to eat"></button>
+              <button class="map-hotspot" data-map-index="2" aria-label="Geology"></button>
+              <button class="map-hotspot" data-map-index="3" aria-label="History"></button>
+              <button class="map-hotspot" data-map-index="4" aria-label="Attractions"></button>
+              <button class="map-hotspot" data-map-index="5" aria-label="Spring"></button>
+              <button class="map-hotspot" data-map-index="6" aria-label="Summer"></button>
+              <button class="map-hotspot" data-map-index="7" aria-label="Autumn"></button>
+              <button class="map-hotspot" data-map-index="8" aria-label="Winter"></button>
+              <button class="map-hotspot" data-map-index="9" aria-label="Extra history button"></button>
             </div>
+            <div class="map-detail-hotspots map-detail-hotspots--wildlife-summer" aria-label="Wildlife summer hotspots">
+              <button class="map-detail-hotspot" data-map-detail-set="wildlife-summer" data-map-detail-key="1" aria-label="Summer wildlife hotspot 1"></button>
+              <button class="map-detail-hotspot" data-map-detail-set="wildlife-summer" data-map-detail-key="2" aria-label="Summer wildlife hotspot 2"></button>
+              <button class="map-detail-hotspot" data-map-detail-set="wildlife-summer" data-map-detail-key="3" aria-label="Summer wildlife hotspot 3"></button>
+              <button class="map-detail-hotspot" data-map-detail-set="wildlife-summer" data-map-detail-key="4" aria-label="Summer wildlife hotspot 4"></button>
+            </div>
+            <aside class="map-info-panel" aria-live="polite">
+              <button class="map-info-panel__close" type="button" aria-label="Close popup">×</button>
+              <h3 class="map-info-panel__title"></h3>
+              <div class="map-info-panel__media">
+                <img class="map-info-panel__image" alt="" hidden />
+                <div class="map-info-panel__image-placeholder" aria-hidden="true"></div>
+              </div>
+              <div class="map-info-panel__body"></div>
+            </aside>
           </div>
         </section>
 
@@ -638,12 +673,31 @@
         </section>
 
 <section class="screen" id="explore-map-cy">
-          <div class="stage-frame stage-frame--image">
+          <div class="stage-frame stage-frame--image" data-map-set="wildlife">
             <img
               data-map-image="true"
               src="assets/images/map-page.png"
               alt="Interactive map visual"
             />
+            <button class="map-back-overlay" data-target-screen="discover-cy" type="button" aria-label="Back to category page">
+              <img src="assets/images/back_overlay_2.png" alt="" />
+            </button>
+            <div class="map-mode-toggle" role="group" aria-label="Choose map">
+              <div class="map-mode-toggle__intro">
+                <h2>Discover the Wildlife of the Great Orme</h2>
+                <p>
+                  The Great Orme is a Country Park, a nationally important Site of Special Scientific Interest and has international status as a Special Area of Conservation. The headland offers a rich variation in habitats and some of the plants and animals you can see here are unique to the Great Orme.
+                </p>
+              </div>
+              <button class="map-mode-toggle__button is-active" data-map-set-target="wildlife" type="button">Wildlife</button>
+              <button class="map-mode-toggle__button" data-map-set-target="geology" type="button">Geology</button>
+              <button class="map-mode-toggle__button" data-map-set-target="history" type="button">History</button>
+            </div>
+            <div class="map-mode-toolbar" role="group" aria-label="Switch map">
+              <button class="map-mode-toolbar__button is-active" data-map-set-target="wildlife" type="button">Wildlife</button>
+              <button class="map-mode-toolbar__button" data-map-set-target="geology" type="button">Geology</button>
+              <button class="map-mode-toolbar__button" data-map-set-target="history" type="button">History</button>
+            </div>
             <button
               class="map-back-hotspot"
               data-target-screen="discover-cy"
@@ -655,15 +709,31 @@
               aria-label="Back to home page"
             ></button>
             <div class="map-legend-hotspots" aria-label="Map category and season hotspots">
-              <button class="map-hotspot" data-image-src="assets/images/map-page_eat.png" aria-label="Places to eat"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_geology.png" aria-label="Geology"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_history.png" aria-label="History"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_attractions.png" aria-label="Attractions"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_spring.png" aria-label="Spring"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_summer.png" aria-label="Summer"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_autumn.png" aria-label="Autumn"></button>
-              <button class="map-hotspot" data-image-src="assets/images/map-page_winter.png" aria-label="Winter"></button>
+              <button class="map-hotspot" data-map-index="1" aria-label="Places to eat"></button>
+              <button class="map-hotspot" data-map-index="2" aria-label="Geology"></button>
+              <button class="map-hotspot" data-map-index="3" aria-label="History"></button>
+              <button class="map-hotspot" data-map-index="4" aria-label="Attractions"></button>
+              <button class="map-hotspot" data-map-index="5" aria-label="Spring"></button>
+              <button class="map-hotspot" data-map-index="6" aria-label="Summer"></button>
+              <button class="map-hotspot" data-map-index="7" aria-label="Autumn"></button>
+              <button class="map-hotspot" data-map-index="8" aria-label="Winter"></button>
+              <button class="map-hotspot" data-map-index="9" aria-label="Extra history button"></button>
             </div>
+            <div class="map-detail-hotspots map-detail-hotspots--wildlife-summer" aria-label="Wildlife summer hotspots">
+              <button class="map-detail-hotspot" data-map-detail-set="wildlife-summer" data-map-detail-key="1" aria-label="Summer wildlife hotspot 1"></button>
+              <button class="map-detail-hotspot" data-map-detail-set="wildlife-summer" data-map-detail-key="2" aria-label="Summer wildlife hotspot 2"></button>
+              <button class="map-detail-hotspot" data-map-detail-set="wildlife-summer" data-map-detail-key="3" aria-label="Summer wildlife hotspot 3"></button>
+              <button class="map-detail-hotspot" data-map-detail-set="wildlife-summer" data-map-detail-key="4" aria-label="Summer wildlife hotspot 4"></button>
+            </div>
+            <aside class="map-info-panel" aria-live="polite">
+              <button class="map-info-panel__close" type="button" aria-label="Close popup">×</button>
+              <h3 class="map-info-panel__title"></h3>
+              <div class="map-info-panel__media">
+                <img class="map-info-panel__image" alt="" hidden />
+                <div class="map-info-panel__image-placeholder" aria-hidden="true"></div>
+              </div>
+              <div class="map-info-panel__body"></div>
+            </aside>
           </div>
         </section>
 
