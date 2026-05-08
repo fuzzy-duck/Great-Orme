@@ -11,6 +11,11 @@
   --wood: #6b4b2d;
   --accent-red: #e45858;
   --shadow: 0 24px 50px rgba(0, 0, 0, 0.25);
+  --type-scale: 1.1;
+}
+
+html {
+  font-size: calc(100% * var(--type-scale));
 }
 
 * {
@@ -217,7 +222,7 @@ h1 {
 
 .test-page-label {
   color: #111111;
-  font: 700 42px/1.1 "Avenir Next", "Gill Sans", sans-serif;
+  font: 700 calc(2.625rem * var(--type-scale))/1.1 "Avenir Next", "Gill Sans", sans-serif;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -436,10 +441,43 @@ h1 {
 
 .screen:is(#info-7, #info-7-cy) .test-page-copy {
   top: 232px;
-  padding: 28px 32px 36px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 32px 28px;
   border-radius: 24px;
   width: 1123px;
   height: 485px;
+  overflow: hidden;
+}
+
+.screen:is(#info-7, #info-7-cy) .test-page-copy--scrollable::after {
+  content: "⌄";
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.08);
+  color: rgba(17, 17, 17, 0.78);
+  font: 700 1.45rem/34px "Avenir Next", "Gill Sans", sans-serif;
+  text-align: center;
+  pointer-events: none;
+}
+
+.screen:is(#info-7, #info-7-cy) .test-page-scroll-body {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 12px;
+  padding-bottom: 46px;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.screen:is(#info-7, #info-7-cy) .test-page-scroll-body p + p {
+  margin-top: 22px;
 }
 
 .answer-options {

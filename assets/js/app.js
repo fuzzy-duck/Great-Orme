@@ -754,6 +754,11 @@ function activateScreen(targetId) {
     const isVisible = screen.id === targetId;
     screen.classList.toggle('is-visible', isVisible);
 
+    const scrollBodies = screen.querySelectorAll('.test-page-scroll-body');
+    scrollBodies.forEach((scrollBody) => {
+      scrollBody.scrollTop = 0;
+    });
+
     const videos = screen.querySelectorAll('video');
     videos.forEach((video) => {
       if (isVisible) {
