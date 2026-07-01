@@ -1138,3 +1138,14 @@ screens.forEach((screen) => {
   label.textContent = screen.id;
   screen.appendChild(label);
 });
+
+// Build timestamp
+fetch('build-info.txt?nocache=' + Date.now())
+  .then(r => r.text())
+  .then(text => {
+    const el = document.createElement('div');
+    el.className = 'build-timestamp';
+    el.textContent = text.trim();
+    document.body.appendChild(el);
+  })
+  .catch(() => {});

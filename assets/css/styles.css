@@ -2313,6 +2313,20 @@ h1 {
 }
 
 /* Debug labels */
+.build-timestamp {
+  position: fixed;
+  bottom: 6px;
+  right: 10px;
+  z-index: 99999;
+  color: rgba(255, 255, 255, 0.7);
+  font: 500 11px/1 monospace;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 3px 7px;
+  border-radius: 4px;
+  pointer-events: none;
+  user-select: none;
+}
+
 .debug-screen-label {
   position: absolute;
   top: 10px;
