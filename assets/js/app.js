@@ -6,6 +6,7 @@ const mapDetailHotspots = document.querySelectorAll('.map-detail-hotspot');
 const mapModeButtons = document.querySelectorAll('[data-map-set-target]');
 const mapInfoCloseButtons = document.querySelectorAll('.map-info-panel__close');
 const answerOptions = document.querySelectorAll('.answer-option');
+const fixedMapPositionDots = document.querySelectorAll('.map-position-dot[data-map-detail-set]');
 const stageRoot = document.documentElement;
 const stageArea = document.querySelector('.stage-area');
 const languageToggleEligibleScreens = Array.from(screens).filter((screen) => !['attractor', 'language'].includes(screen.id));
@@ -51,11 +52,10 @@ const historyMapCopy = {
     ]
   },
   2: {
-    title: 'Kendrick’s Cave',
-    imageSrc: 'assets/images/kendricks-cave.jpg',
+    title: "Ffynnon Powell / Powell's Well",
+    panelFixedPosition: { left: 630.609, top: 548.875 },
     body: [
-      'In 1880 local stone-mason Mr. Thomas Kendrick was clearing a cave in his garden to extend his workshop and discovered a number of bones, including a remarkable decorated horse’s jaw.',
-      'Further excavation has revealed the site as an important Stone Age burial site, and you can see the some of the remains in the Llandudno Museum.'
+      "Ffynnon Powell, or Powell's Well, is a historic spring on the Great Orme, one of many freshwater sources that would have been vital to the communities who lived and worked on the headland throughout the centuries."
     ]
   },
   3: {
@@ -68,7 +68,8 @@ const historyMapCopy = {
   },
   4: {
     title: 'Pen Dinas Iron Age hill-fort & rocking stone',
-    imageSrc: 'assets/images/pen-dinas-hillfort.jpeg',
+    imageSrc: 'assets/images/pen-dinas.jpg',
+    panelFixedPosition: { left: 508.448, top: 244.787 },
     body: [
       'This would have been an ideal place for such a settlement, being protected on three sides by steep cliffs, with only one side needing the construction of a built double bank and ditch defence. Inside the fort there was a large community of over 60 roundhouses.',
       'The ‘Rocking Stone’, is believed to be a way of trying people of certain crimes. The prisoner was stood upon the stone blindfolded – if it rocked they were innocent; if it stayed still they would have been thrown down the cliffs!'
@@ -76,6 +77,7 @@ const historyMapCopy = {
   },
   5: {
     title: 'Medieval Ridge and Furrow Agriculture',
+    imageSrc: 'assets/images/ridge-and-furrow-1.jpg',
     body: [
       'Near St Tudno’s church are extensive and easily visible remains of the medieval “ridge and furrow” agricultural system, where individual families ploughed strips of land in an open field system.',
       'The abandoning of growing crops in favour of grazing animals in later medieval times has preserved this feature.'
@@ -105,13 +107,35 @@ const historyMapCopy = {
       'Passengers change tramcars, each named after a Welsh saint, at the Halfway Station.'
     ]
   },
+  13: {
+    title: 'The Victorian Tramway',
+    imageSrc: 'assets/images/great-orme-tramway.jpeg',
+    body: [
+      'Great Britain\'s only remaining cable-operated street tramway was built in 1902, and runs from Victoria Station in Church Walks, Llandudno, to the Great Orme Summit.',
+      'Passengers change tramcars, each named after a Welsh saint, at the Halfway Station.'
+    ]
+  },
   9: {
     title: 'Wartime Great Orme',
     panelClassName: 'map-info-panel--wide',
     body: [
       'The gun and searchlight emplacements of the Royal Artillery coastal gunnery school can be explored on foot or viewed from above on the Marine Drive.',
       'The summit complex was used as a top secret radar research station, and at the far western end of the headland, a “concrete road” is the old tank track to what was a three-storey building believed to have been a secret experimental radar station.',
-      'Around Bishop’s Quarry is an area known as the Hill of Names where it is said, the limestone rocks were originally arranged into the names of their regiments by the soldiers of the Royal Artillery School during the Second World War; people today continue this tradition by writing their own names.'
+      "Around Bishop’s Quarry is an area known as the Hill of Names where it is said, the limestone rocks were originally arranged into the names of their regiments by the soldiers of the Royal Artillery School during the Second World War; people today continue this tradition by writing their own names."
+    ]
+  },
+  10: {
+    title: "St Tudno’s Church",
+    body: [
+      "Parts of this church date back to the 11th Century, making it one of the oldest places of worship in Wales.",
+      "St Tudno was a 6th-century Welsh saint who is said to have founded a monastery on the Great Orme. The church that bears his name has been a place of pilgrimage and worship for over a thousand years."
+    ]
+  },
+  12: {
+    title: "The Summit Complex",
+    body: [
+      "The Summit Complex sits at the very top of the Great Orme and consists of a café, restaurant and gift shop with breath-taking views across the bay to the mountains of Snowdonia.",
+      "During the Second World War the summit was used as a top secret radar research station."
     ]
   }
 };
@@ -119,6 +143,7 @@ const historyMapCopy = {
 const geologyMapCopy = {
   1: {
     title: 'Fossils found in Bishop’s Quarry',
+    imageSrc: 'assets/images/brachiopods.jpg',
     body: [
       'Corals: Corals are marine animals which are often mistaken for plants.',
       'Brachiopods: Brachiopods have shells and a stalk attaching them to the floor.',
@@ -147,6 +172,7 @@ const geologyMapCopy = {
   },
   5: {
     title: 'Glacial Erratics',
+    imageSrc: 'assets/images/erratic-2.jpg',
     body: [
       'These rocks were carried here inside Ice Age glaciers and dropped as the ice melted; their unusual shapes have inspired local superstitions, and many have been given special names.'
     ]
@@ -321,15 +347,6 @@ const wildlifeAttractionsCopy = {
       '01492 577877'
     ]
   },
-  5: {
-    title: 'The Olde Victorian Picture House',
-    body: [
-      'Create your unforgettable holiday picture with costumes, a studio with a variety of themes and modern technology used to re-create, perfectly, the atmosphere of days gone by. Part of the Summit Complex.',
-      'Open daily 11am - 5pm from mid March to early November',
-      'http://www.theoldevictorianpicturehouse.co.uk/',
-      '01492 860870'
-    ]
-  },
   6: {
     title: 'Rocky Pines Adventure Golf',
     body: [
@@ -354,6 +371,36 @@ const wildlifeAttractionsCopy = {
       'A 4 1/2 mile scenic drive around the Great Orme headland, from Llandudno\'s North Shore to Llandudno\'s West Shore, with wonderful views in all directions.',
       '£2.50 per car (which also covers parking at the summit of the Great Orme)'
     ]
+  },
+  9: {
+    title: 'Tramway & Visitor Centre',
+    body: [
+      'The Great Orme Tramway runs from Victorian Station in Church Walks, Llandudno, to the summit. The Visitor Centre at the tram station provides information about the nature reserve, its wildlife, and the local area.'
+    ]
+  },
+  10: {
+    title: "St. Tudno's Church",
+    body: [
+      "The ancient church of St. Tudno dates back to the 12th century, nestled on the north side of the Great Orme headland. The peaceful churchyard offers stunning sea views and is one of the oldest sites of Christian worship in Wales."
+    ]
+  },
+  11: {
+    title: 'Happy Valley Gardens',
+    body: [
+      "Happy Valley Gardens sits at the base of the Great Orme — a beautiful Victorian pleasure garden offering stunning views of the bay and easy access to the cable car."
+    ]
+  },
+  12: {
+    title: 'Pitch & Putt Golf Course',
+    body: [
+      "A scenic pitch and putt golf course on the Great Orme with spectacular views over Llandudno and the bay."
+    ]
+  },
+  13: {
+    title: 'Haulfre Gardens',
+    body: [
+      "Haulfre Gardens is a beautiful terraced public garden on the slopes of the Great Orme, offering panoramic views across Llandudno including the West Shore and Conwy Estuary."
+    ]
   }
 };
 
@@ -361,22 +408,21 @@ const wildlifeEatCopy = {
   1: {
     title: 'The Summit Complex',
     body: [
-      'The Summit Complex consists of a cafe / restaurant and boxing themed bar with breath-taking views.'
+      'The Summit Complex consists of a cafe / restaurant and gift shop with breath-taking views.'
     ]
   },
   2: {
     title: 'Rest and be Thankful Cafe',
     body: [
       'As well as serving rolls, cakes, drinks, ice creams and many other delightful treats, the Cafe also acts as an information centre for the Great Orme and maintains a large range of photograph albums and specialist publications.',
-      'http://www.restandbethankful.net/'
+      'https://rest-be-thankful.weeblyte.com'
     ]
   },
   3: {
     title: 'Alpine Lodge',
     body: [
       'The Alpine Lodge bar and restaurant provides panoramic views of the main ski slope, toboggan track, Alpine Adventure Golf course and Llandudno bay.',
-      'http://jnllandudno.co.uk',
-      '01492 874707'
+      'www.jnlllandudno.co.uk'
     ]
   },
   4: {
@@ -390,9 +436,7 @@ const wildlifeEatCopy = {
   5: {
     title: 'Haulfre Gardens Tea Rooms',
     body: [
-      'A traditional tea room set in the beautiful and relaxing location of Haulfre Gardens, serving homemade cakes, scones and bara brith. A sheltered sun-trap, with panoramic views across Llandudno including the West Shore and Conwy Estuary.',
-      'Open daily 10am-7pm',
-      '01492 87673'
+      'A traditional tea room set in the beautiful and relaxing location of Haulfre Gardens, serving homemade cakes, scones and bara brith. A sheltered sun-trap, with panoramic views across Llandudno including the West Shore and Conwy Estuary.'
     ]
   }
 };
@@ -418,6 +462,11 @@ function setMapSet(stageFrame, mapSetName, imageIndex = 0) {
 
   stageFrame.dataset.mapSet = mapSetName;
   stageFrame.dataset.mapImageIndex = `${imageIndex}`;
+  if (mapSetName !== 'history') {
+    delete stageFrame.dataset.historyActiveKey;
+  } else if (!stageFrame.dataset.historyActiveKey) {
+    stageFrame.dataset.historyActiveKey = '';
+  }
   mapImage.src = getMapImageSrc(mapSetName, imageIndex);
 
   const buttons = stageFrame.querySelectorAll('[data-map-set-target]');
@@ -426,9 +475,23 @@ function setMapSet(stageFrame, mapSetName, imageIndex = 0) {
   });
 
   hideMapInfoPanel(stageFrame);
+  syncHistoryMapDots(stageFrame);
 }
 
-function positionMapInfoPanel(stageFrame, panel, anchorElement, panelPosition = '') {
+function syncHistoryMapDots(stageFrame) {
+  const historyOverlay = stageFrame?.querySelector('.map-positioning-overlay--history-staging');
+  if (!historyOverlay) {
+    return;
+  }
+
+  const activeKey = stageFrame.dataset.historyActiveKey || '';
+  historyOverlay.querySelectorAll('.map-position-dot').forEach((dot) => {
+    const shouldShow = activeKey !== '' && dot.dataset.mapDetailKey === activeKey;
+    dot.style.display = shouldShow ? 'block' : 'none';
+  });
+}
+
+function positionMapInfoPanel(stageFrame, panel, anchorElement, panelPosition = '', panelOffset = null, panelFixedPosition = null) {
   if (!stageFrame || !panel || !anchorElement) {
     panel?.style.removeProperty('left');
     panel?.style.removeProperty('top');
@@ -436,47 +499,57 @@ function positionMapInfoPanel(stageFrame, panel, anchorElement, panelPosition = 
     return;
   }
 
-  const stageRect = stageFrame.getBoundingClientRect();
-  const anchorRect = anchorElement.getBoundingClientRect();
-  const panelRect = panel.getBoundingClientRect();
-  const gap = 18;
-
   let left;
   let top;
 
-  if (panelPosition === 'below') {
-    left = anchorRect.left - stageRect.left;
-    if (left + panelRect.width > stageRect.width - 24) {
-      left = stageRect.width - panelRect.width - 24;
-    }
-    if (left < 24) {
-      left = 24;
-    }
-
-    top = anchorRect.bottom - stageRect.top + gap;
-    if (top + panelRect.height > stageRect.height - 24) {
-      top = anchorRect.top - stageRect.top - panelRect.height - gap;
-    }
+  if (panelFixedPosition) {
+    left = panelFixedPosition.left;
+    top = panelFixedPosition.top;
   } else {
-    left = anchorRect.left - stageRect.left - panelRect.width - gap;
-    if (left < 24) {
-      left = anchorRect.right - stageRect.left + gap;
-    }
-    if (left + panelRect.width > stageRect.width - 24) {
-      left = stageRect.width - panelRect.width - 24;
+    const stageRect = stageFrame.getBoundingClientRect();
+    const anchorRect = anchorElement.getBoundingClientRect();
+    const panelRect = panel.getBoundingClientRect();
+    const gap = 18;
+
+    if (panelPosition === 'below') {
+      left = anchorRect.left - stageRect.left;
+      if (left + panelRect.width > stageRect.width - 24) {
+        left = stageRect.width - panelRect.width - 24;
+      }
+      if (left < 24) {
+        left = 24;
+      }
+
+      top = anchorRect.bottom - stageRect.top + gap;
+      if (top + panelRect.height > stageRect.height - 24) {
+        top = anchorRect.top - stageRect.top - panelRect.height - gap;
+      }
+    } else {
+      left = anchorRect.left - stageRect.left - panelRect.width - gap;
+      if (left < 24) {
+        left = anchorRect.right - stageRect.left + gap;
+      }
+      if (left + panelRect.width > stageRect.width - 24) {
+        left = stageRect.width - panelRect.width - 24;
+      }
+
+      top = anchorRect.top - stageRect.top;
+      if (top + panelRect.height > stageRect.height - 24) {
+        top = stageRect.height - panelRect.height - 24;
+      }
+      if (top < 24) {
+        top = 24;
+      }
     }
 
-    top = anchorRect.top - stageRect.top;
-    if (top + panelRect.height > stageRect.height - 24) {
-      top = stageRect.height - panelRect.height - 24;
-    }
     if (top < 24) {
       top = 24;
     }
-  }
 
-  if (top < 24) {
-    top = 24;
+    if (panelOffset) {
+      left += panelOffset.x ?? 0;
+      top += panelOffset.y ?? 0;
+    }
   }
 
   panel.style.left = `${left}px`;
@@ -484,7 +557,7 @@ function positionMapInfoPanel(stageFrame, panel, anchorElement, panelPosition = 
   panel.style.bottom = 'auto';
 }
 
-function showMapInfoPanel(stageFrame, title, paragraphs, imageSrc = '', panelClassName = '', anchorElement = null, panelPosition = '') {
+function showMapInfoPanel(stageFrame, title, paragraphs, imageSrc = '', panelClassName = '', anchorElement = null, panelPosition = '', panelOffset = null, panelFixedPosition = null) {
   const panel = stageFrame?.querySelector('.map-info-panel');
   const panelTitle = panel?.querySelector('.map-info-panel__title');
   const panelBody = panel?.querySelector('.map-info-panel__body');
@@ -529,7 +602,7 @@ function showMapInfoPanel(stageFrame, title, paragraphs, imageSrc = '', panelCla
   }
 
   panel.classList.add('is-visible');
-  positionMapInfoPanel(stageFrame, panel, anchorElement, panelPosition);
+  positionMapInfoPanel(stageFrame, panel, anchorElement, panelPosition, panelOffset, panelFixedPosition);
 }
 
 function hideMapInfoPanel(stageFrame) {
@@ -714,6 +787,33 @@ function openStoryMap(screenId, mapSetName) {
   }
 }
 
+function applyLaunchStateFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const screenId = params.get('screen');
+  const mapSetName = params.get('map');
+  const imageIndexRaw = params.get('image');
+  const imageIndex = imageIndexRaw === null ? null : Number.parseInt(imageIndexRaw, 10);
+
+  if (!screenId) {
+    return;
+  }
+
+  const targetScreen = document.getElementById(screenId);
+  if (!targetScreen) {
+    return;
+  }
+
+  activateScreen(screenId);
+
+  const mapFrame = targetScreen.querySelector('.stage-frame[data-map-set]');
+  if (!mapFrame || !mapSetName) {
+    return;
+  }
+
+  setMapSet(mapFrame, mapSetName, Number.isFinite(imageIndex) ? imageIndex : 0);
+  dismissMapOverlay(mapFrame);
+}
+
 function addStoryMapHotspots() {
   screens.forEach((screen) => {
     const stageFrame = screen.querySelector('.stage-frame--test');
@@ -820,6 +920,10 @@ mapHotspots.forEach((hotspot) => {
 
       stageFrame.dataset.mapImageIndex = `${imageIndex}`;
       mapImage.src = getMapImageSrc(mapSetName, imageIndex);
+      if (mapSetName === 'history') {
+        stageFrame.dataset.historyActiveKey = `${imageIndex}`;
+        syncHistoryMapDots(stageFrame);
+      }
 
       const panelCopy = mapSetName === 'history'
         ? historyMapCopy[imageIndex]
@@ -835,7 +939,9 @@ mapHotspots.forEach((hotspot) => {
           panelCopy.imageSrc ?? '',
           panelCopy.panelClassName ?? '',
           hotspot,
-          panelCopy.panelPosition ?? ''
+          panelCopy.panelPosition ?? '',
+          panelCopy.panelOffset ?? null,
+          panelCopy.panelFixedPosition ?? null
         );
       } else {
         hideMapInfoPanel(stageFrame);
@@ -862,6 +968,8 @@ mapDetailHotspots.forEach((hotspot) => {
               ? wildlifeAttractionsCopy[detailKey]
               : detailSet === 'wildlife-eat'
                 ? wildlifeEatCopy[detailKey]
+                : detailSet === 'geology'
+                  ? geologyMapCopy[detailKey]
         : null;
 
     if (stageFrame && panelCopy) {
@@ -872,7 +980,49 @@ mapDetailHotspots.forEach((hotspot) => {
         panelCopy.imageSrc ?? '',
         panelCopy.panelClassName ?? '',
         hotspot,
-        panelCopy.panelPosition ?? ''
+        panelCopy.panelPosition ?? '',
+        panelCopy.panelOffset ?? null,
+        panelCopy.panelFixedPosition ?? null
+      );
+    }
+  });
+});
+
+fixedMapPositionDots.forEach((dot) => {
+  dot.addEventListener('click', () => {
+    const stageFrame = dot.closest('.stage-frame');
+    const detailSet = dot.dataset.mapDetailSet;
+    const detailKey = Number(dot.dataset.mapPopupKey || dot.dataset.mapDetailKey || 0);
+
+    const panelCopy = detailSet === 'wildlife-summer'
+      ? wildlifeSummerCopy[detailKey]
+      : detailSet === 'wildlife-spring'
+        ? wildlifeSpringCopy[detailKey]
+        : detailSet === 'wildlife-autumn'
+          ? wildlifeAutumnCopy[detailKey]
+          : detailSet === 'wildlife-winter'
+            ? wildlifeWinterCopy[detailKey]
+            : detailSet === 'wildlife-attractions'
+              ? wildlifeAttractionsCopy[detailKey]
+              : detailSet === 'wildlife-eat'
+                ? wildlifeEatCopy[detailKey]
+                : detailSet === 'geology'
+                  ? geologyMapCopy[detailKey]
+                  : detailSet === 'history'
+                    ? historyMapCopy[detailKey]
+                    : null;
+
+    if (stageFrame && panelCopy) {
+      showMapInfoPanel(
+        stageFrame,
+        panelCopy.title,
+        panelCopy.body,
+        panelCopy.imageSrc ?? '',
+        panelCopy.panelClassName ?? '',
+        dot,
+        panelCopy.panelPosition ?? '',
+        panelCopy.panelOffset ?? null,
+        panelCopy.panelFixedPosition ?? null
       );
     }
   });
@@ -949,4 +1099,42 @@ addStoryMapHotspots();
 document.querySelectorAll('.stage-frame[data-map-set]').forEach((stageFrame) => {
   setMapSet(stageFrame, stageFrame.dataset.mapSet || 'wildlife');
 });
+applyLaunchStateFromUrl();
 window.addEventListener('resize', fitStageToViewport);
+
+function updatePositioningHud(stageFrame) {
+  const sr = stageFrame.getBoundingClientRect();
+  if (!sr.width) return;
+  stageFrame.querySelectorAll('.map-positioning-hud').forEach((hud) => {
+    const list = hud.querySelector('.map-positioning-hud__list');
+    if (!list) return;
+    const group = hud.dataset.positionGroup;
+    const overlay = group ? stageFrame.querySelector(`.map-positioning-overlay--${group}`) : null;
+    const dots = overlay
+      ? overlay.querySelectorAll('.map-position-dot')
+      : stageFrame.querySelectorAll('.map-positioning-overlay .map-position-dot');
+    list.innerHTML = '';
+    dots.forEach((dot, i) => {
+      const er = dot.getBoundingClientRect();
+      const x = ((er.left + er.width / 2 - sr.left) / sr.width * 100).toFixed(2);
+      const y = ((er.top + er.height / 2 - sr.top) / sr.height * 100).toFixed(2);
+      const colorClass = [...dot.classList].find(c => c.startsWith('map-position-dot--'));
+      const color = colorClass ? colorClass.replace('map-position-dot--', '').toUpperCase() : `${i + 1}`;
+      const label = (dot.getAttribute('aria-label') || '').replace(' placeholder', '');
+      const li = document.createElement('li');
+      li.textContent = `${i + 1}. ${color} | ${label} | ${x}%, ${y}%`;
+      list.appendChild(li);
+    });
+  });
+}
+
+document.querySelectorAll('.stage-frame').forEach(updatePositioningHud);
+document.querySelectorAll('.stage-frame[data-map-set="history"]').forEach(syncHistoryMapDots);
+
+// Debug labels
+screens.forEach((screen) => {
+  const label = document.createElement('div');
+  label.className = 'debug-screen-label';
+  label.textContent = screen.id;
+  screen.appendChild(label);
+});

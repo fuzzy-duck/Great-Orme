@@ -353,15 +353,6 @@ changing cars at the Halfway Station.
 Open mid-March to early November 10am - 5.45pm daily
 http://www.greatormetramway.co.uk/
 01492 577877
-ATTRACTIONS ICON 5:
---- PAGE 12 ---
-The Olde Victorian Picture House
-Create your unforgettable holiday picture with costumes, a studio with a variety of
-themes and modern technology used to re-create, perfectly, the atmosphere of days
-gone by. Part of the Summit Complex.
-Open daily 11am - 5pm from mid March to early November
-http://www.theoldevictorianpicturehouse.co.uk/
-01492 860870
 ATTRACTIONS ICON 6:
 Rocky Pines Adventure Golf
 Part of the Summit Complex, Rocky Pines Adventure Golf is an 18-hole course
@@ -392,7 +383,7 @@ Rest and be Thankful Cafe
 As well as serving rolls, cakes, drinks, ice creams and many other delightful treats,
 the Cafe also acts as an information centre for the Great Orme and maintains a large
 range of photograph albums and specialist publications.
-http://www.restandbethankful.net/
+https://rest-be-thankful.weeblyte.com
 WHERE TO EAT ICON 3:
 Alpine Lodge
 The Alpine Lodge bar and restaurant provides panoramic views of the main ski slope,

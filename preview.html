@@ -59,6 +59,12 @@
     </main>
     <script>
       const root = document.documentElement;
+      const previewScreen = document.querySelector('.preview-screen');
+
+      if (previewScreen) {
+        const forwardedQuery = window.location.search || '';
+        previewScreen.src = `index.html${forwardedQuery}`;
+      }
 
       function fitPreview() {
         const maxScale = 0.64;

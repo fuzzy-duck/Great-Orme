@@ -25,13 +25,35 @@
               <source src="assets/videos/language.mp4" type="video/mp4" />
             </video>
             <div class="language-options language-options--simple">
-              <button class="language-card language-card--simple" data-target-screen="discover" aria-label="English">
+              <button class="language-card language-card--simple" data-target-screen="main-menu" aria-label="English">
                 <img src="assets/images/english-button.png" alt="English" />
               </button>
-              <button class="language-card language-card--simple" data-target-screen="discover-cy" aria-label="Cymraeg">
+              <button class="language-card language-card--simple" data-target-screen="main-menu-cy" aria-label="Cymraeg">
                 <img src="assets/images/welsh-button.png" alt="Cymraeg" />
               </button>
             </div>
+          </div>
+        </section>
+
+        <section class="screen" id="main-menu">
+          <div class="stage-frame stage-frame--image">
+            <video class="stage-video" autoplay muted loop playsinline>
+              <source src="assets/videos/home.mp4" type="video/mp4" />
+            </video>
+            <button class="main-menu-btn main-menu-btn--left" data-target-screen="explore-map" type="button" aria-label="Explore the map"></button>
+            <button class="main-menu-btn main-menu-btn--right" data-target-screen="discover" type="button" aria-label="Discover"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="language" aria-label="Back to language selection"></button>
+          </div>
+        </section>
+
+        <section class="screen" id="main-menu-cy">
+          <div class="stage-frame stage-frame--image">
+            <video class="stage-video" autoplay muted loop playsinline>
+              <source src="assets/videos/home.mp4" type="video/mp4" />
+            </video>
+            <button class="main-menu-btn main-menu-btn--left" data-target-screen="explore-map" type="button" aria-label="Explore the map"></button>
+            <button class="main-menu-btn main-menu-btn--right" data-target-screen="discover-cy" type="button" aria-label="Darganfod"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="language" aria-label="Back to language selection"></button>
           </div>
         </section>
 
@@ -87,7 +109,7 @@
               src="assets/images/map-page.png"
               alt="Interactive map visual"
             />
-            <button class="map-back-overlay" data-target-screen="discover" type="button" aria-label="Back to category page">
+            <button class="map-back-overlay" data-target-screen="main-menu" type="button" aria-label="Back to main menu">
               <img src="assets/images/back_overlay_2.png" alt="" />
             </button>
             <div class="map-mode-toggle" role="group" aria-label="Choose map">
@@ -108,12 +130,12 @@
             </div>
             <button
               class="map-back-hotspot"
-              data-target-screen="discover"
-              aria-label="Back to category page"
+              data-target-screen="main-menu"
+              aria-label="Back to main menu"
             ></button>
             <button
               class="map-home-hotspot"
-              data-target-screen="language"
+              data-target-screen="main-menu"
               aria-label="Back to home page"
             ></button>
             <div class="map-legend-hotspots" aria-label="Map category and season hotspots">
@@ -171,6 +193,102 @@
               <button class="map-detail-hotspot" data-map-detail-set="wildlife-eat" data-map-detail-key="4" aria-label="Places to eat hotspot 4"></button>
               <button class="map-detail-hotspot" data-map-detail-set="wildlife-eat" data-map-detail-key="5" aria-label="Places to eat hotspot 5"></button>
             </div>
+            <div class="map-detail-hotspots map-detail-hotspots--geology" aria-label="Geology map placeholders">
+              <button class="map-detail-hotspot map-detail-hotspot--geology-blue" data-map-detail-set="geology" data-map-detail-key="5" aria-label="Glacial erratics placeholder"></button>
+              <button class="map-detail-hotspot map-detail-hotspot--geology-yellow" data-map-detail-set="geology" data-map-detail-key="2" aria-label="Limestone pavement placeholder"></button>
+              <button class="map-detail-hotspot map-detail-hotspot--geology-pink" data-map-detail-set="geology" data-map-detail-key="1" aria-label="Quarry and fossils placeholder"></button>
+              <button class="map-detail-hotspot map-detail-hotspot--geology-green" data-map-detail-set="geology" data-map-detail-key="4" aria-label="Malachite and copper placeholder"></button>
+              <button class="map-detail-hotspot map-detail-hotspot--geology-red" data-map-detail-set="geology" data-map-detail-key="3" aria-label="Quarry placeholder"></button>
+            </div>
+            <div class="map-positioning-overlay map-positioning-overlay--summer" aria-label="Summer wildlife dots">
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="1" aria-label="Summer wildlife 1"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="2" aria-label="Summer wildlife 2"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="3" aria-label="Summer wildlife 3"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="4" aria-label="Summer wildlife 4"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="5" aria-label="Summer wildlife 5"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="6" aria-label="Summer wildlife 6"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="7" aria-label="Summer wildlife 7"></button>
+            </div>
+            <div class="map-positioning-overlay map-positioning-overlay--spring" aria-label="Spring wildlife dots">
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-spring" data-map-detail-key="1" aria-label="Spring wildlife 1"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-spring" data-map-detail-key="2" aria-label="Spring wildlife 2"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-spring" data-map-detail-key="3" aria-label="Spring wildlife 3"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-spring" data-map-detail-key="4" aria-label="Spring wildlife 4"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-spring" data-map-detail-key="5" aria-label="Spring wildlife 5"></button>
+            </div>
+            <div class="map-positioning-overlay map-positioning-overlay--autumn" aria-label="Autumn wildlife dots">
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-autumn" data-map-detail-key="1" aria-label="Autumn wildlife 1"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-autumn" data-map-detail-key="2" aria-label="Autumn wildlife 2"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-autumn" data-map-detail-key="3" aria-label="Autumn wildlife 3"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-autumn" data-map-detail-key="4" aria-label="Autumn wildlife 4"></button>
+            </div>
+            <div class="map-positioning-overlay map-positioning-overlay--winter" aria-label="Winter wildlife dots">
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-winter" data-map-detail-key="1" aria-label="Winter wildlife 1"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-winter" data-map-detail-key="2" aria-label="Winter wildlife 2"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-winter" data-map-detail-key="3" aria-label="Winter wildlife 3"></button>
+            </div>
+            <div class="map-positioning-overlay map-positioning-overlay--eat-staging" aria-label="Where to eat draggable positioning dots">
+              <button class="map-position-dot map-position-dot--red" type="button" data-map-detail-set="wildlife-eat" data-map-detail-key="1" aria-label="Summit Cafe"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-eat" data-map-detail-key="2" aria-label="Rest and Be Thankful Cafe"></button>
+              <button class="map-position-dot map-position-dot--yellow" type="button" data-map-detail-set="wildlife-eat" data-map-detail-key="3" aria-label="Ski Lodge"></button>
+              <button class="map-position-dot map-position-dot--orange" type="button" data-map-detail-set="wildlife-eat" data-map-detail-key="4" aria-label="Parrisellas Cafe"></button>
+              <button class="map-position-dot map-position-dot--purple" type="button" data-map-detail-set="wildlife-eat" data-map-detail-key="5" aria-label="Haulfre Tea Rooms"></button>
+            </div>
+            <div class="map-positioning-overlay map-positioning-overlay--attractions-staging" aria-label="Attractions draggable positioning dots">
+              <button class="map-position-dot map-position-dot--purple" type="button" data-map-detail-set="wildlife-attractions" data-map-detail-key="4" aria-label="Tramway"></button>
+              <button class="map-position-dot map-position-dot--red" type="button" data-map-detail-set="wildlife-attractions" data-map-detail-key="9" aria-label="Tramway and Visitor Centre"></button>
+              <button class="map-position-dot map-position-dot--pink" type="button" data-map-detail-set="wildlife-attractions" data-map-detail-key="2" aria-label="Great Orme Mines"></button>
+              <button class="map-position-dot map-position-dot--yellow" type="button" data-map-detail-set="wildlife-attractions" data-map-detail-key="3" aria-label="Cable Car"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-attractions" data-map-detail-key="1" aria-label="Ski Slope"></button>
+              <button class="map-position-dot map-position-dot--white" type="button" data-map-detail-set="wildlife-attractions" data-map-detail-key="10" aria-label="St Tudnos Church"></button>
+              <button class="map-position-dot map-position-dot--black" type="button" data-map-detail-set="wildlife-attractions" data-map-detail-key="8" aria-label="Marine Drive Scenic Toll Road"></button>
+              <button class="map-position-dot map-position-dot--orange" type="button" data-map-detail-set="wildlife-attractions" data-map-detail-key="11" aria-label="Happy Valley Gardens"></button>
+              <button class="map-position-dot map-position-dot--turquoise" type="button" data-map-detail-set="wildlife-attractions" data-map-detail-key="12" aria-label="Pitch and Putt Golf Course"></button>
+              <button class="map-position-dot map-position-dot--grey" type="button" data-map-detail-set="wildlife-attractions" data-map-detail-key="13" aria-label="Haulfre Gardens"></button>
+            </div>
+            <div class="map-positioning-hud" data-position-group="eat-staging">
+              <h3>Where to Eat Positions</h3>
+              <p>Drag dots then screenshot coordinates.</p>
+              <ol class="map-positioning-hud__list"></ol>
+            </div>
+            <div class="map-positioning-hud" data-position-group="wildlife-staging">
+              <h3>Dot Positions</h3>
+              <p>Drag dots then screenshot coordinates.</p>
+              <ol class="map-positioning-hud__list"></ol>
+            </div>
+            <div class="map-positioning-hud" data-position-group="attractions-staging">
+              <h3>Attractions Positions</h3>
+              <p>Drag dots then screenshot coordinates.</p>
+              <ol class="map-positioning-hud__list"></ol>
+            </div>
+            <div class="map-positioning-overlay map-positioning-overlay--history-staging" aria-label="History map dots">
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="7" aria-label="The Lighthouse"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="5" aria-label="Medieval Ridge and Furrow"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="8" aria-label="The Tramway upper route"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="3" aria-label="The Great Orme Copper Mine"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="1" aria-label="A Stone Age burial chamber"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="8" data-map-popup-key="13" aria-label="The Tramway halfway station"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="4" aria-label="Pen Dinas Iron Age hill-fort and rocking stone"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="8" aria-label="The Tramway lower station"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="5" aria-label="Medieval Ridge and Furrow north field"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="5" aria-label="Medieval Ridge and Furrow east field"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="9" aria-label="Wartime Great Orme west cliffs"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="9" aria-label="Wartime Great Orme gunsite"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="6" aria-label="Shipwrecks north coast"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="6" aria-label="Shipwrecks north sea"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="6" aria-label="Shipwrecks west coast"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="6" aria-label="Shipwrecks south sea"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="history" data-map-detail-key="2" aria-label="Ffynnon Powell / Powell's Well"></button>
+            </div>
+            <div class="map-positioning-overlay map-positioning-overlay--geology" aria-label="Geology map dots">
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="5" aria-label="Glacial Erratics"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="2" aria-label="Limestone Pavement"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="1" aria-label="Fossils"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="4" aria-label="Copper Mineral Veins"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="3" aria-label="Rock Contours 1"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="3" aria-label="Rock Contours 2"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="3" aria-label="Rock Contours 3"></button>
+            </div>
             <aside class="map-info-panel" aria-live="polite">
               <button class="map-info-panel__close" type="button" aria-label="Close popup">×</button>
               <h3 class="map-info-panel__title"></h3>
@@ -189,10 +307,58 @@
               <source src="assets/videos/Category-Screen.mp4" type="video/mp4" />
             </video>
             <div class="hotspot-grid" aria-label="Category selection hotspots">
-              <button class="hotspot-zone" data-target-screen="explore-map" aria-label="Open map page"></button>
+              <button class="hotspot-zone" data-target-screen="wildlife-intro" aria-label="Open wildlife page"></button>
               <button class="hotspot-zone" data-target-screen="history-test" aria-label="Open history video page"></button>
               <button class="hotspot-zone" data-target-screen="info" aria-label="Open geology video page"></button>
             </div>
+          </div>
+        </section>
+
+        <section class="screen" id="wildlife-intro">
+          <div class="stage-frame stage-frame--image stage-frame--test">
+            <video class="stage-video" autoplay muted loop playsinline>
+              <source src="assets/videos/wildlife-screen.mp4" type="video/mp4" />
+            </video>
+            <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 0px;">
+              <h2>Discover the Wildlife of the Great Orme</h2>
+              <p>
+                The Great Orme is a Country Park, a nationally important Site of Special Scientific Interest and has international status as a Special Area of Conservation. The headland offers a rich variation in habitats and some of the plants and animals you can see here are unique to the Great Orme.
+              </p>
+            </div>
+            <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="discover" aria-label="Back to category page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="wildlife-intro-2" aria-label="Next page"></button>
+          </div>
+        </section>
+
+        <section class="screen" id="wildlife-intro-2">
+          <div class="stage-frame stage-frame--image stage-frame--test">
+            <video class="stage-video" autoplay muted loop playsinline>
+              <source src="assets/videos/wildlife-screen.mp4" type="video/mp4" />
+            </video>
+            <div class="test-page-copy test-page-copy--scrollable" style="--debug-dx: 0px; --debug-dy: 0px;">
+              <h2>Discover the Wildlife of the Great Orme</h2>
+              <div class="test-page-scroll-body">
+                <div class="wildlife-intro-row">
+                  <div class="question-image-placeholder wildlife-intro-brochure"></div>
+                  <p>
+                    You can walk the Great Orme Nature Trail. This circular walk around the headland, starting and finishing at the summit, is approximately 3 hours and 6.5 km/4 miles long, with a shorter route available. The track is steep and uneven in places, and walking boots are recommended.
+                  </p>
+                </div>
+                <div class="wildlife-intro-row">
+                  <div class="question-image-placeholder wildlife-intro-brochure"></div>
+                  <p>
+                    Or you could go your own way and track down the wildflowers in our Wildflower Chart. The booklets are available from the visitor centre shop or can be downloaded from the Countryside pages of Conwy County Borough Council's website.
+                  </p>
+                </div>
+                <p>
+                  Now let's explore nature's year on the Great Orme and see just what makes the Great Orme so special…
+                </p>
+              </div>
+            </div>
+            <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="wildlife-intro" aria-label="Back to previous page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="explore-map" aria-label="Explore the wildlife map"></button>
           </div>
         </section>
 
@@ -206,7 +372,7 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 20px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 Today, the Great Orme is a Country Park, a place for recreation and relaxing. But people have lived and worked here for centuries. As you walk around, it is worth remembering the people who were here before you. So join our Country Park Warden as he reveals some of the secrets of man's impact on the peninsula...
               </p>
@@ -216,11 +382,11 @@
                 </p>
                 <div class="answer-options" aria-label="Question 1 answer options">
                   <button class="answer-option" type="button" data-correct="true">
-                    <span>sea serpent</span>
+                    <span>Sea serpent</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                   <button class="answer-option" type="button">
-                    <span>dragon</span>
+                    <span>Dragon</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                 </div>
@@ -233,7 +399,7 @@
             ></button>
             <button
               class="story-nav-hotspot story-nav-hotspot--home"
-              data-target-screen="language"
+              data-target-screen="main-menu"
               aria-label="Back to home page"
             ></button>
             <button
@@ -250,7 +416,7 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 74px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 Viking sailors may have thought that the headland looked like the head of a great sea serpent in the mist, and are believed to have called the Orme "Horma Heva". But they were not the first people to come here...
               </p>
@@ -275,7 +441,7 @@
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-3" aria-label="Next page"></button>
           </div>
         </section>
@@ -286,7 +452,7 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 21px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 The first inhabitants of the Great Orme were Stone Age hunter-gatherer tribes who came across from Europe over 15,000 years ago when Britain was still joined to the European mainland. They sheltered in the many caves around the Orme, and remains have been found of stone axes, flint scrapers and decorated animal bones.
               </p>
@@ -296,22 +462,22 @@
                 </p>
                 <div class="answer-options" aria-label="Question 3 answer options">
                   <button class="answer-option" type="button">
-                    <span>iron</span>
+                    <span>Iron</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                   <button class="answer-option" type="button" data-correct="true">
-                    <span>bronze</span>
+                    <span>Bronze</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                   <button class="answer-option" type="button">
-                    <span>gold</span>
+                    <span>Gold</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                 </div>
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-2" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-4" aria-label="Next page"></button>
           </div>
         </section>
@@ -322,13 +488,13 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 128px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 Bronze is a hard metal made from copper &amp; tin, and the local copper deposits allowed an important mining community to flourish here around 3,500 years ago. Bronze was so important to early mankind that this period and its peoples are called the Bronze Age.
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-3" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-5" aria-label="Next page"></button>
           </div>
         </section>
@@ -339,13 +505,13 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 113px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 Around 800 years BC, Celtic tribes from Europe brought iron-working skills and built well-defended hill-forts and elaborate burial monuments. The hill fort of Pen Dinas contains the remains of over 60 roundhouses, and there are also many important Stone Age archaeological finds here on the Great Orme.
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-4" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-6" aria-label="Next page"></button>
           </div>
         </section>
@@ -356,13 +522,13 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 122px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 There is no evidence that the Romans settled here, but there are medieval settlements on the Great Orme which show a well-established community. Cyngreawdr stood around St Tudno's church, which survives to the present day. You can see the remains of houses just below the summit, and clearly visible remains of the medieval "ridge and furrow" farming system.
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-5" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-7" aria-label="Next page"></button>
           </div>
         </section>
@@ -373,7 +539,7 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 35px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 Farming continues today at Pink Farm and Parc Farm. Much of the headland became a Country Park in 1980 and tourism is now the main activity of the Great Orme. Today, the Park attracts over 600,000 visitors a year.
               </p>
@@ -398,7 +564,7 @@
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-6" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-8" aria-label="Next page"></button>
           </div>
         </section>
@@ -409,13 +575,13 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 98px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 In Victorian Britain, shorter working hours and the wealth created by the Industrial Revolution created a boom in leisure activities for all classes. From 1878, the rich could tour the Marine Drive toll road in their horse drawn carriages, and in 1902, the Tramway was completed, bringing crowds to the summit area, where an old telegraph station had been rebuilt as a hotel and is now a cafe.
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-7" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-9" aria-label="Next page"></button>
           </div>
         </section>
@@ -426,13 +592,13 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 114px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 The Great Orme was a vital part of the war effort during the Second World War: the Royal Artillery coastal gunnery school relocated from Shoeburyness in Essex to the west shore of the Great Orme in the summer of 1940 to avoid damage from enemy bombing. The shallow seas off the headland provided the ideal place for anchoring target ships.
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-8" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-10" aria-label="Next page"></button>
           </div>
         </section>
@@ -443,7 +609,7 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 38px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 You can explore the map to see where all these features are, or discover many more fascinating features of the Great Orme's history by Taking a Tour.
               </p>
@@ -452,7 +618,7 @@
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-9" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-10" aria-label="Next page"></button>
           </div>
         </section>
@@ -463,7 +629,7 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 22px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
               <p>
                 The Great Orme is a spectacular headland 3 km long and 207 metres high, formed from rock created over 300 million years ago and shaped by the forces of nature ever since. We call the study of rocks geology, and the Great Orme has many nationally important geological features: let's take a tour through those 300 million years...
               </p>
@@ -473,11 +639,11 @@
                 </p>
                 <div class="answer-options" aria-label="Question 1 answer options">
                   <button class="answer-option" type="button">
-                    <span>extinct volcano</span>
+                    <span>Extinct volcano</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                   <button class="answer-option" type="button" data-correct="true">
-                    <span>millions of tiny sea creatures</span>
+                    <span>Millions of tiny sea creatures</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                 </div>
@@ -490,7 +656,7 @@
             ></button>
             <button
               class="story-nav-hotspot story-nav-hotspot--home"
-              data-target-screen="language"
+              data-target-screen="main-menu"
               aria-label="Back to home page"
             ></button>
             <button
@@ -507,7 +673,7 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 99px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
               <p>
                 The Great Orme is made of limestone. All this area was once at the bottom of the sea, and the shells of all the sea creatures and corals were crushed together to form rock. You can see fossils of many of them in the limestone at Bishop's Quarry, but please do not try to remove them. As limestone is very hard, rock was taken from here to build a palace for the Bishop of Bangor in the 13th Century.
               </p>
@@ -519,7 +685,7 @@
             ></button>
             <button
               class="story-nav-hotspot story-nav-hotspot--home"
-              data-target-screen="language"
+              data-target-screen="main-menu"
               aria-label="Back to home page"
             ></button>
             <button
@@ -536,7 +702,7 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 31px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
               <p>
                 Volcanic forces under the Earth's crust made it shift and buckle, and the once-flat layers of rock were ripped apart in different directions and left lying at various angles, as you can see on the cliffs.
               </p>
@@ -557,7 +723,7 @@
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="info-2" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="info-4" aria-label="Next page"></button>
           </div>
         </section>
@@ -568,7 +734,7 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 59px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
               <p>
                 The cracks and caves were formed by later weathering; the volcanic magma created veins of copper minerals, including striking green Malachite.
               </p>
@@ -589,7 +755,7 @@
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="info-3" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="info-5" aria-label="Next page"></button>
           </div>
         </section>
@@ -600,7 +766,7 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 82px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
               <p>
                 During the last Ice Age, there would have been over a kilometre of ice above our heads. The pressure of the ice in the glaciers scraped across the rock, creating the rounded shape we see today.
               </p>
@@ -621,7 +787,7 @@
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="info-4" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="info-6" aria-label="Next page"></button>
           </div>
         </section>
@@ -632,13 +798,13 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 1px; --debug-dy: 134px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
               <p>
                 As the glaciers moved, they ripped up large stones and dropped them again. These stones are called glacial erratics. This one is called "The Mother &amp; Daughter".
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="info-5" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="info-7" aria-label="Next page"></button>
           </div>
         </section>
@@ -649,23 +815,30 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy test-page-copy--scrollable" style="--debug-dx: 0px; --debug-dy: 6px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
+              <div class="info-7-left">
+                <div class="question-image-placeholder"></div>
+                <div class="info-7-qr">
+                  <img src="assets/images/greatorme-qr.svg" alt="QR code for www.conwy.gov.uk/greatorme" />
+                </div>
+              </div>
               <div class="test-page-scroll-body">
                 <p>
-                  You can explore the map to see where all these features are, or discover many more fascinating features of the Great Orme's geology by Taking a Tour.
+                  Discover more about the Great Orme with our range of booklets, available to buy in the visitor centre shop:
                 </p>
                 <p>
-                  The Summit Trails leaflet can be bought at the visitor centre shop, and contains three scenic walks with stunning views; running from the town of Llandudno to the summit of the Great Orme, or followed in reverse from the summit to Llandudno. The tracks are steep and uneven in places, and walking boots are recommended.
+                  • <strong>Discover the Great Orme</strong><br />
+                  • <strong>Great Orme Historical Trails</strong><br />
+                  • <strong>Nature Trail</strong>
                 </p>
                 <p>
-                  • Haulfre Gardens Trail: 1 mile. Allow about 1 hour.<br />
-                  • Happy Valley Trail: 1½ miles long. Allow about 1½ hours.<br />
-                  • Zig Zag Trail: 1 mile. Allow about 1½ hours.
+                  You can also download them from our website. Scan the QR code or visit:<br />
+                  <strong>www.conwy.gov.uk/greatorme</strong>
                 </p>
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="info-6" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="info-7" aria-label="Next page"></button>
           </div>
         </section>
@@ -721,7 +894,7 @@
               src="assets/images/map-page.png"
               alt="Interactive map visual"
             />
-            <button class="map-back-overlay" data-target-screen="discover-cy" type="button" aria-label="Back to category page">
+            <button class="map-back-overlay" data-target-screen="main-menu-cy" type="button" aria-label="Back to main menu">
               <img src="assets/images/back_overlay_2.png" alt="" />
             </button>
             <div class="map-mode-toggle" role="group" aria-label="Choose map">
@@ -742,12 +915,12 @@
             </div>
             <button
               class="map-back-hotspot"
-              data-target-screen="discover-cy"
-              aria-label="Back to category page"
+              data-target-screen="main-menu-cy"
+              aria-label="Back to main menu"
             ></button>
             <button
               class="map-home-hotspot"
-              data-target-screen="language"
+              data-target-screen="main-menu-cy"
               aria-label="Back to home page"
             ></button>
             <div class="map-legend-hotspots" aria-label="Map category and season hotspots">
@@ -805,6 +978,42 @@
               <button class="map-detail-hotspot" data-map-detail-set="wildlife-eat" data-map-detail-key="4" aria-label="Places to eat hotspot 4"></button>
               <button class="map-detail-hotspot" data-map-detail-set="wildlife-eat" data-map-detail-key="5" aria-label="Places to eat hotspot 5"></button>
             </div>
+            <div class="map-positioning-overlay map-positioning-overlay--summer" aria-label="Summer wildlife dots">
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="1" aria-label="Summer wildlife 1"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="2" aria-label="Summer wildlife 2"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="3" aria-label="Summer wildlife 3"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="4" aria-label="Summer wildlife 4"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="5" aria-label="Summer wildlife 5"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="6" aria-label="Summer wildlife 6"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-summer" data-map-detail-key="7" aria-label="Summer wildlife 7"></button>
+            </div>
+            <div class="map-positioning-overlay map-positioning-overlay--spring" aria-label="Spring wildlife dots">
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-spring" data-map-detail-key="1" aria-label="Spring wildlife 1"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-spring" data-map-detail-key="2" aria-label="Spring wildlife 2"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-spring" data-map-detail-key="3" aria-label="Spring wildlife 3"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-spring" data-map-detail-key="4" aria-label="Spring wildlife 4"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-spring" data-map-detail-key="5" aria-label="Spring wildlife 5"></button>
+            </div>
+            <div class="map-positioning-overlay map-positioning-overlay--autumn" aria-label="Autumn wildlife dots">
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-autumn" data-map-detail-key="1" aria-label="Autumn wildlife 1"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-autumn" data-map-detail-key="2" aria-label="Autumn wildlife 2"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-autumn" data-map-detail-key="3" aria-label="Autumn wildlife 3"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-autumn" data-map-detail-key="4" aria-label="Autumn wildlife 4"></button>
+            </div>
+            <div class="map-positioning-overlay map-positioning-overlay--winter" aria-label="Winter wildlife dots">
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-winter" data-map-detail-key="1" aria-label="Winter wildlife 1"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-winter" data-map-detail-key="2" aria-label="Winter wildlife 2"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="wildlife-winter" data-map-detail-key="3" aria-label="Winter wildlife 3"></button>
+            </div>
+            <div class="map-positioning-overlay map-positioning-overlay--geology" aria-label="Geology map dots">
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="5" aria-label="Glacial Erratics"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="2" aria-label="Limestone Pavement"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="1" aria-label="Fossils"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="4" aria-label="Copper Mineral Veins"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="3" aria-label="Rock Contours 1"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="3" aria-label="Rock Contours 2"></button>
+              <button class="map-position-dot map-position-dot--green" type="button" data-map-detail-set="geology" data-map-detail-key="3" aria-label="Rock Contours 3"></button>
+            </div>
             <aside class="map-info-panel" aria-live="polite">
               <button class="map-info-panel__close" type="button" aria-label="Close popup">×</button>
               <h3 class="map-info-panel__title"></h3>
@@ -823,10 +1032,58 @@
               <source src="assets/videos/Category-Screen.mp4" type="video/mp4" />
             </video>
             <div class="hotspot-grid" aria-label="Category selection hotspots">
-              <button class="hotspot-zone" data-target-screen="explore-map-cy" aria-label="Open map page"></button>
+              <button class="hotspot-zone" data-target-screen="wildlife-intro-cy" aria-label="Open wildlife page"></button>
               <button class="hotspot-zone" data-target-screen="history-test-cy" aria-label="Open history video page"></button>
               <button class="hotspot-zone" data-target-screen="info-cy" aria-label="Open geology video page"></button>
             </div>
+          </div>
+        </section>
+
+        <section class="screen" id="wildlife-intro-cy">
+          <div class="stage-frame stage-frame--image stage-frame--test">
+            <video class="stage-video" autoplay muted loop playsinline>
+              <source src="assets/videos/wildlife-screen.mp4" type="video/mp4" />
+            </video>
+            <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 0px;">
+              <h2>Discover the Wildlife of the Great Orme</h2>
+              <p>
+                The Great Orme is a Country Park, a nationally important Site of Special Scientific Interest and has international status as a Special Area of Conservation. The headland offers a rich variation in habitats and some of the plants and animals you can see here are unique to the Great Orme.
+              </p>
+            </div>
+            <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="discover-cy" aria-label="Back to category page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="wildlife-intro-2-cy" aria-label="Next page"></button>
+          </div>
+        </section>
+
+        <section class="screen" id="wildlife-intro-2-cy">
+          <div class="stage-frame stage-frame--image stage-frame--test">
+            <video class="stage-video" autoplay muted loop playsinline>
+              <source src="assets/videos/wildlife-screen.mp4" type="video/mp4" />
+            </video>
+            <div class="test-page-copy test-page-copy--scrollable" style="--debug-dx: 0px; --debug-dy: 0px;">
+              <h2>Discover the Wildlife of the Great Orme</h2>
+              <div class="test-page-scroll-body">
+                <div class="wildlife-intro-row">
+                  <div class="question-image-placeholder wildlife-intro-brochure"></div>
+                  <p>
+                    You can walk the Great Orme Nature Trail. This circular walk around the headland, starting and finishing at the summit, is approximately 3 hours and 6.5 km/4 miles long, with a shorter route available. The track is steep and uneven in places, and walking boots are recommended.
+                  </p>
+                </div>
+                <div class="wildlife-intro-row">
+                  <div class="question-image-placeholder wildlife-intro-brochure"></div>
+                  <p>
+                    Or you could go your own way and track down the wildflowers in our Wildflower Chart. The booklets are available from the visitor centre shop or can be downloaded from the Countryside pages of Conwy County Borough Council's website.
+                  </p>
+                </div>
+                <p>
+                  Now let's explore nature's year on the Great Orme and see just what makes the Great Orme so special…
+                </p>
+              </div>
+            </div>
+            <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="wildlife-intro-cy" aria-label="Back to previous page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="explore-map-cy" aria-label="Explore the wildlife map"></button>
           </div>
         </section>
 
@@ -841,7 +1098,7 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 20px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 Today, the Great Orme is a Country Park, a place for recreation and relaxing. But people have lived and worked here for centuries. As you walk around, it is worth remembering the people who were here before you. So join our Country Park Warden as he reveals some of the secrets of man's impact on the peninsula...
               </p>
@@ -851,11 +1108,11 @@
                 </p>
                 <div class="answer-options" aria-label="Question 1 answer options">
                   <button class="answer-option" type="button" data-correct="true">
-                    <span>sea serpent</span>
+                    <span>Sea serpent</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                   <button class="answer-option" type="button">
-                    <span>dragon</span>
+                    <span>Dragon</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                 </div>
@@ -868,7 +1125,7 @@
             ></button>
             <button
               class="story-nav-hotspot story-nav-hotspot--home"
-              data-target-screen="language"
+              data-target-screen="main-menu-cy"
               aria-label="Back to home page"
             ></button>
             <button
@@ -885,7 +1142,7 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 74px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 Viking sailors may have thought that the headland looked like the head of a great sea serpent in the mist, and are believed to have called the Orme "Horma Heva". But they were not the first people to come here...
               </p>
@@ -910,7 +1167,7 @@
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-3-cy" aria-label="Next page"></button>
           </div>
         </section>
@@ -921,9 +1178,9 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 21px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
-                The first inhabitants of the Great Orme were Stone Age hunter-gatherer tribes who came across from Europe over 15,000 years ago when Britain was still joined to the European mainland. They sheltered in the many caves around the Orme, and remains have been found of stone axes, flint scrapers and decorated animal bones.
+                The first inhabitants of the Great Orme were Stone Age hunter-gatherer tribes who came across from Europe over 15,000 years ago when Britain was still joined to the European mainland. They sheltered in the many caves around the Great (Orme), and remains have been found of stone axes, flint scrapers and decorated animal bones.
               </p>
               <div class="question-block">
                 <p class="question-line">
@@ -931,22 +1188,22 @@
                 </p>
                 <div class="answer-options" aria-label="Question 3 answer options">
                   <button class="answer-option" type="button">
-                    <span>iron</span>
+                    <span>Iron</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                   <button class="answer-option" type="button" data-correct="true">
-                    <span>bronze</span>
+                    <span>Bronze</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                   <button class="answer-option" type="button">
-                    <span>gold</span>
+                    <span>Gold</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                 </div>
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-2-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-4-cy" aria-label="Next page"></button>
           </div>
         </section>
@@ -957,13 +1214,13 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 128px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 Bronze is a hard metal made from copper &amp; tin, and the local copper deposits allowed an important mining community to flourish here around 3,500 years ago. Bronze was so important to early mankind that this period and its peoples are called the Bronze Age.
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-3-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-5-cy" aria-label="Next page"></button>
           </div>
         </section>
@@ -974,13 +1231,13 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 113px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 Around 800 years BC, Celtic tribes from Europe brought iron-working skills and built well-defended hill-forts and elaborate burial monuments. The hill fort of Pen Dinas contains the remains of over 60 roundhouses, and there are also many important Stone Age archaeological finds here on the Great Orme.
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-4-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-6-cy" aria-label="Next page"></button>
           </div>
         </section>
@@ -991,13 +1248,13 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 122px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 There is no evidence that the Romans settled here, but there are medieval settlements on the Great Orme which show a well-established community. Cyngreawdr stood around St Tudno's church, which survives to the present day. You can see the remains of houses just below the summit, and clearly visible remains of the medieval "ridge and furrow" farming system.
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-5-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-7-cy" aria-label="Next page"></button>
           </div>
         </section>
@@ -1008,9 +1265,9 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 35px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
-                Farming continues today at Pink Farm and Parc Farm. Much of the headland became a Country Park in 1980 and tourism is now the main activity of the Great Orme. Today, the Park attracts over 600,000 visitors a year.
+                Farming continues today at Pink Farm and Parc Farm. Much of the headland became a Country Park in 1980 and tourism is now the main activity of the Great Orme. Today, the Country Park attracts over 600,000 visitors a year.
               </p>
               <div class="question-block">
                 <p class="question-line">
@@ -1033,7 +1290,7 @@
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-6-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-8-cy" aria-label="Next page"></button>
           </div>
         </section>
@@ -1044,13 +1301,13 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 98px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 In Victorian Britain, shorter working hours and the wealth created by the Industrial Revolution created a boom in leisure activities for all classes. From 1878, the rich could tour the Marine Drive toll road in their horse drawn carriages, and in 1902, the Tramway was completed, bringing crowds to the summit area, where an old telegraph station had been rebuilt as a hotel and is now a cafe.
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-7-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-9-cy" aria-label="Next page"></button>
           </div>
         </section>
@@ -1061,13 +1318,13 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 114px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 The Great Orme was a vital part of the war effort during the Second World War: the Royal Artillery coastal gunnery school relocated from Shoeburyness in Essex to the west shore of the Great Orme in the summer of 1940 to avoid damage from enemy bombing. The shallow seas off the headland provided the ideal place for anchoring target ships.
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-8-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-10-cy" aria-label="Next page"></button>
           </div>
         </section>
@@ -1078,7 +1335,7 @@
               <source src="assets/videos/history-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 38px;">
-              <h2>Discover Man's Place on the Great Orme</h2>
+              <h2>Discover man's place on the Great Orme</h2>
               <p>
                 You can explore the map to see where all these features are, or discover many more fascinating features of the Great Orme's history by Taking a Tour.
               </p>
@@ -1087,7 +1344,7 @@
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="history-test-9-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="history-test-10-cy" aria-label="Next page"></button>
           </div>
         </section>
@@ -1098,7 +1355,7 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 22px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
               <p>
                 The Great Orme is a spectacular headland 3 km long and 207 metres high, formed from rock created over 300 million years ago and shaped by the forces of nature ever since. We call the study of rocks geology, and the Great Orme has many nationally important geological features: let's take a tour through those 300 million years...
               </p>
@@ -1108,11 +1365,11 @@
                 </p>
                 <div class="answer-options" aria-label="Question 1 answer options">
                   <button class="answer-option" type="button">
-                    <span>extinct volcano</span>
+                    <span>Extinct volcano</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                   <button class="answer-option" type="button" data-correct="true">
-                    <span>millions of tiny sea creatures</span>
+                    <span>Millions of tiny sea creatures</span>
                     <span class="answer-box" aria-hidden="true"></span>
                   </button>
                 </div>
@@ -1125,7 +1382,7 @@
             ></button>
             <button
               class="story-nav-hotspot story-nav-hotspot--home"
-              data-target-screen="language"
+              data-target-screen="main-menu-cy"
               aria-label="Back to home page"
             ></button>
             <button
@@ -1142,7 +1399,7 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 99px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
               <p>
                 The Great Orme is made of limestone. All this area was once at the bottom of the sea, and the shells of all the sea creatures and corals were crushed together to form rock. You can see fossils of many of them in the limestone at Bishop's Quarry, but please do not try to remove them. As limestone is very hard, rock was taken from here to build a palace for the Bishop of Bangor in the 13th Century.
               </p>
@@ -1154,7 +1411,7 @@
             ></button>
             <button
               class="story-nav-hotspot story-nav-hotspot--home"
-              data-target-screen="language"
+              data-target-screen="main-menu-cy"
               aria-label="Back to home page"
             ></button>
             <button
@@ -1171,7 +1428,7 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 31px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
               <p>
                 Volcanic forces under the Earth's crust made it shift and buckle, and the once-flat layers of rock were ripped apart in different directions and left lying at various angles, as you can see on the cliffs.
               </p>
@@ -1192,7 +1449,7 @@
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="info-2-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="info-4-cy" aria-label="Next page"></button>
           </div>
         </section>
@@ -1203,7 +1460,7 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 59px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
               <p>
                 The cracks and caves were formed by later weathering; the volcanic magma created veins of copper minerals, including striking green Malachite.
               </p>
@@ -1224,7 +1481,7 @@
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="info-3-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="info-5-cy" aria-label="Next page"></button>
           </div>
         </section>
@@ -1235,7 +1492,7 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 0px; --debug-dy: 82px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
               <p>
                 During the last Ice Age, there would have been over a kilometre of ice above our heads. The pressure of the ice in the glaciers scraped across the rock, creating the rounded shape we see today.
               </p>
@@ -1256,7 +1513,7 @@
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="info-4-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="info-6-cy" aria-label="Next page"></button>
           </div>
         </section>
@@ -1267,13 +1524,13 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy" style="--debug-dx: 1px; --debug-dy: 134px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
               <p>
                 As the glaciers moved, they ripped up large stones and dropped them again. These stones are called glacial erratics. This one is called "The Mother &amp; Daughter".
               </p>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="info-5-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="info-7-cy" aria-label="Next page"></button>
           </div>
         </section>
@@ -1284,23 +1541,30 @@
               <source src="assets/videos/geology-screen.mp4" type="video/mp4" />
             </video>
             <div class="test-page-copy test-page-copy--scrollable" style="--debug-dx: 0px; --debug-dy: 6px;">
-              <h2>Discover how the Great Orme was formed</h2>
+              <h2>Discover the Great Orme</h2>
+              <div class="info-7-left">
+                <div class="question-image-placeholder"></div>
+                <div class="info-7-qr">
+                  <img src="assets/images/greatorme-qr.svg" alt="QR code for www.conwy.gov.uk/greatorme" />
+                </div>
+              </div>
               <div class="test-page-scroll-body">
                 <p>
-                  You can explore the map to see where all these features are, or discover many more fascinating features of the Great Orme's geology by Taking a Tour.
+                  Discover more about the Great Orme with our range of booklets, available to buy in the visitor centre shop:
                 </p>
                 <p>
-                  The Summit Trails leaflet can be bought at the visitor centre shop, and contains three scenic walks with stunning views; running from the town of Llandudno to the summit of the Great Orme, or followed in reverse from the summit to Llandudno. The tracks are steep and uneven in places, and walking boots are recommended.
+                  • <strong>Discover the Great Orme</strong><br />
+                  • <strong>Great Orme Historical Trails</strong><br />
+                  • <strong>Nature Trail</strong>
                 </p>
                 <p>
-                  • Haulfre Gardens Trail: 1 mile. Allow about 1 hour.<br />
-                  • Happy Valley Trail: 1½ miles long. Allow about 1½ hours.<br />
-                  • Zig Zag Trail: 1 mile. Allow about 1½ hours.
+                  You can also download them from our website. Scan the QR code or visit:<br />
+                  <strong>www.conwy.gov.uk/greatorme</strong>
                 </p>
               </div>
             </div>
             <button class="story-nav-hotspot story-nav-hotspot--back" data-target-screen="info-6-cy" aria-label="Back to previous page"></button>
-            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="language" aria-label="Back to home page"></button>
+            <button class="story-nav-hotspot story-nav-hotspot--home" data-target-screen="main-menu-cy" aria-label="Back to home page"></button>
             <button class="story-nav-hotspot story-nav-hotspot--next" data-target-screen="info-7-cy" aria-label="Next page"></button>
           </div>
         </section>
