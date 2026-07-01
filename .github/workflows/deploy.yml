@@ -26,11 +26,12 @@ jobs:
           echo "${{ github.sha }} | $(date -u '+%d %b %Y %H:%M UTC')" > build-info.txt
 
       - name: Deploy via SFTP
-        uses: Dylan700/sftp-upload-action@latest
-        with:
-          server: ${{ secrets.DEPLOY_HOST }}
-          username: ${{ secrets.DEPLOY_USER }}
-          password: ${{ secrets.DEPLOY_PASSWORD }}
-          port: 22
-          uploads: |
-            ./ => ${{ secrets.DEPLOY_PATH }}/
+        run: |
+          lftp -c "
+            set sftp:auto-confirm yes;
+            set net:timeout 60;
+            set net:max-retries 3;
+            open sftp://${{ secrets.DEPLOY_USER }}:${{ secrets.DEPLOY_PASSWORD }}@${{ secrets.DEPLOY_HOST }};
+            mirror --reverse --parallel=4 --exclude='^\.git/' --exclude='^\.github/' ./ ${{ secrets.DEPLOY_PATH }}/;
+            quit
+          "
