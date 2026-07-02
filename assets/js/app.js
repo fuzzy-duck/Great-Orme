@@ -47,8 +47,9 @@ const historyMapCopy = {
   1: {
     title: 'A Stone Age burial chamber',
     imageSrc: 'assets/images/stone-age-burial-chamber.jpg',
+    panelFixedPosition: { left: 690.537, top: 350.839 },
     body: [
-      '“Llety’r Filiast” (literally translated as “lair of the female greyhound”) is a spectacular example of a Stone Age cromlech or burial chamber approximately 10 minutes walk from the visitor centre, near the Great Orme Ancient Mines.'
+      '“Llety\'r Filiast” (literally translated as “lair of the female greyhound”) is a spectacular example of a Stone Age cromlech or burial chamber approximately 10 minutes walk from the visitor centre, near the Great Orme Ancient Mines.'
     ]
   },
   2: {
@@ -60,7 +61,7 @@ const historyMapCopy = {
   },
   3: {
     title: 'The Great Orme Copper Mine',
-    imageSrc: 'assets/images/great-orme-copper-mine.jpg',
+    panelFixedPosition: { left: 692.531, top: 241.914 },
     body: [
       'Visit the Great Orme Ancient Mines, explore some of the Bronze Age tunnels, and discover how the Bronze Age miners lit fires deep underground to shatter the rock and work the seams of copper ore with primitive stone hammers and animal bones or even antlers as picks.',
       'In the 17th century there was new demand for copper, and mining began again on a grand scale. You can see surface mines and spoil heaps between the summit and the halfway tram station, as the more modern miners first exploited easily accessible seams near the surface, and then deeper excavations underground.'
@@ -72,28 +73,31 @@ const historyMapCopy = {
     panelFixedPosition: { left: 508.448, top: 244.787 },
     body: [
       'This would have been an ideal place for such a settlement, being protected on three sides by steep cliffs, with only one side needing the construction of a built double bank and ditch defence. Inside the fort there was a large community of over 60 roundhouses.',
-      'The ‘Rocking Stone’, is believed to be a way of trying people of certain crimes. The prisoner was stood upon the stone blindfolded – if it rocked they were innocent; if it stayed still they would have been thrown down the cliffs!'
+      'The \'Rocking Stone\', is believed to be a way of trying people of certain crimes. The prisoner was stood upon the stone blindfolded – if it rocked they were innocent; if it stayed still they would have been thrown down the cliffs!'
     ]
   },
   5: {
     title: 'Medieval Ridge and Furrow Agriculture',
     imageSrc: 'assets/images/ridge-and-furrow-1.jpg',
+    panelFixedPosition: { left: 692.531, top: 582.914 },
     body: [
-      'Near St Tudno’s church are extensive and easily visible remains of the medieval “ridge and furrow” agricultural system, where individual families ploughed strips of land in an open field system.',
+      'Near St Tudno\'s church are extensive and easily visible remains of the medieval “ridge and furrow” agricultural system, where individual families ploughed strips of land in an open field system.',
       'The abandoning of growing crops in favour of grazing animals in later medieval times has preserved this feature.'
     ]
   },
   6: {
     title: 'Shipwrecks',
     imageSrc: 'assets/images/shipwrecks.jpg',
+    panelFixedPosition: { left: 604.531, top: 325 },
     body: [
-      'The Great Orme headland was a major navigational hazard to ships travelling to Liverpool and there have been many shipwrecks. On New Year’s Day 1824, the “Hornby” struck the rocks and was wrecked.',
+      'The Great Orme headland was a major navigational hazard to ships travelling to Liverpool and there have been many shipwrecks. On New Year\'s Day 1824, the “Hornby” struck the rocks and was wrecked.',
       'A crew member called John Williams was thrown onto the cliffs, and scrambled to safety. He settled in the area and became a miner, telling his tale of survival, and the cave below the cliffs became known as Hornby cave. The Llandudno lifeboat was first launched in 1861 to rescue the many shipwrecked sailors of this period.'
     ]
   },
   7: {
     title: 'The Lighthouse',
     imageSrc: 'assets/images/great-orme-lighthouse.jpg',
+    panelFixedPosition: { left: 483, top: 311 },
     body: [
       'The Great Orme lighthouse was built in 1862 by the Mersey Docks and Harbour Company to help guide shipping into the busy port of Liverpool.',
       'After closure in 1985 it was turned into a bed and breakfast hotel – but the original light was saved and is now here in the visitor centre.'
@@ -101,7 +105,8 @@ const historyMapCopy = {
   },
   8: {
     title: 'The Tramway',
-    imageSrc: 'assets/images/great-orme-tramway.jpeg',
+    imageSrc: 'assets/images/trams-3.jpg',
+    panelFixedPosition: { left: 679.531, top: 273 },
     body: [
       'Great Britain\'s only remaining cable-operated street tramway was built in 1902, and runs from Victoria Station in Church Walks, Llandudno, to the Great Orme Summit.',
       'Passengers change tramcars, each named after a Welsh saint, at the Halfway Station.'
@@ -109,7 +114,7 @@ const historyMapCopy = {
   },
   13: {
     title: 'The Victorian Tramway',
-    imageSrc: 'assets/images/great-orme-tramway.jpeg',
+    imageSrc: 'assets/images/trams-3.jpg',
     body: [
       'Great Britain\'s only remaining cable-operated street tramway was built in 1902, and runs from Victoria Station in Church Walks, Llandudno, to the Great Orme Summit.',
       'Passengers change tramcars, each named after a Welsh saint, at the Halfway Station.'
@@ -121,11 +126,12 @@ const historyMapCopy = {
     body: [
       'The gun and searchlight emplacements of the Royal Artillery coastal gunnery school can be explored on foot or viewed from above on the Marine Drive.',
       'The summit complex was used as a top secret radar research station, and at the far western end of the headland, a “concrete road” is the old tank track to what was a three-storey building believed to have been a secret experimental radar station.',
-      "Around Bishop’s Quarry is an area known as the Hill of Names where it is said, the limestone rocks were originally arranged into the names of their regiments by the soldiers of the Royal Artillery School during the Second World War; people today continue this tradition by writing their own names."
+      "Around Bishop's Quarry is an area known as the Hill of Names where it is said, the limestone rocks were originally arranged into the names of their regiments by the soldiers of the Royal Artillery School during the Second World War; people today continue this tradition by writing their own names."
     ]
   },
   10: {
-    title: "St Tudno’s Church",
+    title: "St Tudno's Church",
+    imageSrc: 'assets/images/st-tudnos-church.jpg',
     body: [
       "Parts of this church date back to the 11th Century, making it one of the oldest places of worship in Wales.",
       "St Tudno was a 6th-century Welsh saint who is said to have founded a monastery on the Great Orme. The church that bears his name has been a place of pilgrimage and worship for over a thousand years."
@@ -133,6 +139,7 @@ const historyMapCopy = {
   },
   12: {
     title: "The Summit Complex",
+    imageSrc: 'assets/images/summit-complex.jpg',
     body: [
       "The Summit Complex sits at the very top of the Great Orme and consists of a café, restaurant and gift shop with breath-taking views across the bay to the mountains of Snowdonia.",
       "During the Second World War the summit was used as a top secret radar research station."
@@ -142,8 +149,9 @@ const historyMapCopy = {
 
 const geologyMapCopy = {
   1: {
-    title: 'Fossils found in Bishop’s Quarry',
+    title: 'Fossils found in Bishop\'s Quarry',
     imageSrc: 'assets/images/brachiopods.jpg',
+    panelFixedPosition: { left: 677.531, top: 286.234 },
     body: [
       'Corals: Corals are marine animals which are often mistaken for plants.',
       'Brachiopods: Brachiopods have shells and a stalk attaching them to the floor.',
@@ -153,6 +161,8 @@ const geologyMapCopy = {
   },
   2: {
     title: 'Limestone Pavement',
+    imageSrc: 'assets/images/limestone-pavement.jpg',
+    panelFixedPosition: { left: 518.531, top: 300.234 },
     body: [
       'As the Ice Age glaciers retreated, they exposed the limestone to rain, which washed into the cracks and eroded them into deep fissures or “grykes” between blocks of limestone known as “clints”.',
       'This creates the limestone pavement, a rare and fragile feature which provides a home for many unusual and delicate plants.'
@@ -160,12 +170,15 @@ const geologyMapCopy = {
   },
   3: {
     title: 'Rock Contours',
+    imageSrc: 'assets/images/cliff-formation.jpg',
+    panelFixedPosition: { left: 625.531, top: 415.438 },
     body: [
       'These layers of rock have been twisted and tilted by underground volcanic forces. As the sea wore away the cliff face, the layers, or “stratifications”, have been revealed.'
     ]
   },
   4: {
     title: 'Copper Mineral Vein',
+    panelFixedPosition: { left: 657.531, top: 335 },
     body: [
       'This coloured stripe in the rock is copper ore, which has been mined here since the Bronze Age; you can go round the ancient mines and see how important copper once was.'
     ]
@@ -173,6 +186,7 @@ const geologyMapCopy = {
   5: {
     title: 'Glacial Erratics',
     imageSrc: 'assets/images/erratic-2.jpg',
+    panelFixedPosition: { left: 653.531, top: 395.438 },
     body: [
       'These rocks were carried here inside Ice Age glaciers and dropped as the ice melted; their unusual shapes have inspired local superstitions, and many have been given special names.'
     ]
@@ -182,6 +196,7 @@ const geologyMapCopy = {
 const wildlifeSummerCopy = {
   1: {
     title: 'Summer Icon 1',
+    imageSrc: 'assets/images/common-rockrose.jpg',
     panelPosition: 'below',
     body: [
       'During the summer months, spiked speedwell, common rockrose, hoary rockrose and the purple flowering wild thyme can be seen carpeting areas of limestone grassland.'
@@ -189,6 +204,7 @@ const wildlifeSummerCopy = {
   },
   2: {
     title: 'Summer Icon 2',
+    imageSrc: 'assets/images/helleborine.jpg',
     body: [
       'The beautiful dark-red helleborine is a species of orchid which is endangered in Wales, so seeing it on the cliffs is a real treat. Keep an eye out for it in June and July.'
     ]
@@ -201,26 +217,30 @@ const wildlifeSummerCopy = {
   },
   4: {
     title: 'Summer Icon 4',
+    imageSrc: 'assets/images/thrift.jpg',
     body: [
       'Beginning to flower in late spring and continuing throughout the first 2 months of summer, rose pink thrift plants carpet the grasslands.'
     ]
   },
   5: {
     title: 'Summer Icon 5',
+    imageSrc: 'assets/images/grayling.jpg',
     body: [
       'The grayling butterfly is a master of disguise. The sub-species found on the Great Orme is unique; it cannot be found anywhere else!'
     ]
   },
   6: {
     title: 'Summer Icon 6',
+    imageSrc: 'assets/images/silver-studded-blue.jpg',
     body: [
       'The silver-studded blue butterfly is small but beautiful, and the sub-species seen here is unique to the Great Orme.'
     ]
   },
   7: {
     title: 'Summer Icon 7',
+    imageSrc: 'assets/images/stonechat.jpg',
     body: [
-      'Listen for the call of the Great Orme’s resident stonechats among the gorse bushes: distinctive clicks that sound like stones tapped together, giving the bird its name.'
+      'Listen for the call of the Great Orme\'s resident stonechats among the gorse bushes: distinctive clicks that sound like stones tapped together, giving the bird its name.'
     ]
   }
 };
@@ -228,13 +248,15 @@ const wildlifeSummerCopy = {
 const wildlifeSpringCopy = {
   1: {
     title: 'Spring Icon 1',
+    imageSrc: 'assets/images/goat-kids.jpg',
     body: [
-      'As nature wakes up after the winter, spring marks the arrival of goat kids on the Great Orme. Usually difficult to spot, watch out for them if you see a group of nanny goats (females), but please don’t disturb them.',
-      'These are Kashmir goats, much prized for their wool, acquired from Queen Victoria’s Royal herd by Major General Sir Savage Mostyn, and brought here in the 1900s; they have roamed wild ever since.'
+      "As nature wakes up after the winter, spring marks the arrival of goat kids on the Great Orme. Usually difficult to spot, watch out for them if you see a group of nanny goats (females), but please don't disturb them.",
+      "These are Kashmir goats, much prized for their wool, acquired from Queen Victoria's Royal herd by Major General Sir Savage Mostyn, and brought here in the 1900s; they have roamed wild ever since."
     ]
   },
   2: {
     title: 'Spring Icon 2',
+    imageSrc: 'assets/images/ring-ouzel.jpg',
     body: [
       'Spring sees our biggest visitor numbers: but these visitors come all the way from Africa! Ring Ouzels, Tree Pipits and Whinchats stop here to “refuel” as they follow the spring migration north.',
       'Swallows, Wheatears and Willow Warblers complete their migration here, settling on the Great Orme to breed each summer.'
@@ -242,13 +264,15 @@ const wildlifeSpringCopy = {
   },
   3: {
     title: 'Spring Icon 3',
+    imageSrc: 'assets/images/cotoneaster.jpg',
     body: [
-      'Cotoneaster cambricus or the ‘Great Orme berry’ is found nowhere else but on limestone cliffs of the Great Orme and is Critically Endangered.',
+      'Cotoneaster cambricus or the \'Great Orme berry\' is found nowhere else but on limestone cliffs of the Great Orme and is Critically Endangered.',
       'It has small white flowers in spring and berries like miniature apples in the autumn. It is these berries that give the plant its Welsh name, Craig Afal (Rock Apple).'
     ]
   },
   4: {
     title: 'Spring Icon 4',
+    imageSrc: 'assets/images/hutchinsia.jpg',
     body: [
       'Other rare wildflowers include spring cinquefoil, spring sandwort and hutchinsia.',
       'Thrift can be seen carpeting areas of grassland and sea cliffs towards the end of spring.'
@@ -256,6 +280,7 @@ const wildlifeSpringCopy = {
   },
   5: {
     title: 'Spring Icon 5',
+    imageSrc: 'assets/images/violets.jpg',
     body: [
       'On the northern side of the Great Orme are relics of the woodland that once grew on many parts of the headland. Plants like violets, wood sorrel, wood anemones and primroses now thrive under a canopy of bracken.',
       'This habitat provides an important refuge for woodland plants and the insects that rely on them.'
@@ -266,6 +291,7 @@ const wildlifeSpringCopy = {
 const wildlifeAutumnCopy = {
   1: {
     title: 'Autumn Icon 1',
+    imageSrc: 'assets/images/deer-rutting.jpg',
     body: [
       'In the autumn you can see the billy goats clashing horns to compete for the attention of the nanny goats.'
     ]
@@ -284,6 +310,7 @@ const wildlifeAutumnCopy = {
   },
   4: {
     title: 'Autumn Icon 4',
+    imageSrc: 'assets/images/fungi.jpg',
     body: [
       'The woodlands are rich with mosses, fungi and lichens, and red campion flowers can be seen up to October.'
     ]
@@ -293,6 +320,7 @@ const wildlifeAutumnCopy = {
 const wildlifeWinterCopy = {
   1: {
     title: 'Winter Icon 1',
+    imageSrc: 'assets/images/snow-bunting.png',
     body: [
       'Winter sees the arrival of birds from Northern Europe and the Arctic such as the snow bunting, which searches for seeds on the generally snow-free ground as it over-winters here.'
     ]
@@ -305,6 +333,7 @@ const wildlifeWinterCopy = {
   },
   3: {
     title: 'Winter Icon 3',
+    imageSrc: 'assets/images/heathland-cut.jpg',
     body: [
       'Hardy domestic sheep will be out in all weathers, and so will our Country Park Wardens; the heathlands are cut every winter to encourage new seedlings and fresh ground cover.'
     ]
@@ -333,6 +362,7 @@ const wildlifeAttractionsCopy = {
   },
   3: {
     title: 'The Cable Car',
+    imageSrc: 'assets/images/cable-car.jpg',
     body: [
       'Running from Happy Valley to the Great Orme Summit, the Cable Car reveals many magnificent views, and at one mile from end to end, is the longest aerial cabin lift in the United Kingdom.',
       'http://www.greatorme.org.uk/cablecar.html'
@@ -340,6 +370,7 @@ const wildlifeAttractionsCopy = {
   },
   4: {
     title: 'The Tramway',
+    imageSrc: 'assets/images/trams-1.jpg',
     body: [
       'Great Britain\'s only remaining cable operated street tramway runs from Victoria Station in Church Walks, Llandudno, to the Great Orme Summit, with passengers changing cars at the Halfway Station.',
       'Open mid-March to early November 10am - 5.45pm daily',
@@ -367,6 +398,7 @@ const wildlifeAttractionsCopy = {
   },
   8: {
     title: 'Marine Drive',
+    imageSrc: 'assets/images/marine-drive.jpg',
     body: [
       'A 4 1/2 mile scenic drive around the Great Orme headland, from Llandudno\'s North Shore to Llandudno\'s West Shore, with wonderful views in all directions.',
       '£2.50 per car (which also covers parking at the summit of the Great Orme)'
@@ -374,12 +406,14 @@ const wildlifeAttractionsCopy = {
   },
   9: {
     title: 'Tramway & Visitor Centre',
+    imageSrc: 'assets/images/trams-2.jpg',
     body: [
       'The Great Orme Tramway runs from Victorian Station in Church Walks, Llandudno, to the summit. The Visitor Centre at the tram station provides information about the nature reserve, its wildlife, and the local area.'
     ]
   },
   10: {
     title: "St. Tudno's Church",
+    imageSrc: 'assets/images/st-tudnos-church.jpg',
     body: [
       "The ancient church of St. Tudno dates back to the 12th century, nestled on the north side of the Great Orme headland. The peaceful churchyard offers stunning sea views and is one of the oldest sites of Christian worship in Wales."
     ]
@@ -407,12 +441,15 @@ const wildlifeAttractionsCopy = {
 const wildlifeEatCopy = {
   1: {
     title: 'The Summit Complex',
+    imageSrc: 'assets/images/summit-complex.jpg',
+    panelFixedPosition: { left: 697.23, top: 662.988 },
     body: [
       'The Summit Complex consists of a cafe / restaurant and gift shop with breath-taking views.'
     ]
   },
   2: {
     title: 'Rest and be Thankful Cafe',
+    imageSrc: 'assets/images/rest-and-be-thankful.jpg',
     body: [
       'As well as serving rolls, cakes, drinks, ice creams and many other delightful treats, the Cafe also acts as an information centre for the Great Orme and maintains a large range of photograph albums and specialist publications.',
       'https://rest-be-thankful.weeblyte.com'
@@ -420,21 +457,25 @@ const wildlifeEatCopy = {
   },
   3: {
     title: 'Alpine Lodge',
+    imageSrc: 'assets/images/alpine-lodge.jpg',
     body: [
       'The Alpine Lodge bar and restaurant provides panoramic views of the main ski slope, toboggan track, Alpine Adventure Golf course and Llandudno bay.',
       'www.jnlllandudno.co.uk'
     ]
   },
   4: {
-    title: 'Parisella’s Cafeteria',
+    title: 'Parisella\'s Cafeteria',
+    imageSrc: 'assets/images/parisella-cafe.jpg',
     body: [
-      'Set in Happy Valley gardens, Parisella’s Cafeteria provides drinks, cakes, hot meals and Parisella’s own ice cream.',
+      'Set in Happy Valley gardens, Parisella\'s Cafeteria provides drinks, cakes, hot meals and Parisella\'s own ice cream.',
       'www.parisellasicecream.co.uk',
       '01492 592448'
     ]
   },
   5: {
     title: 'Haulfre Gardens Tea Rooms',
+    imageSrc: 'assets/images/haulfre-tearoom.jpg',
+    panelFixedPosition: { left: 290.941, top: 735.039 },
     body: [
       'A traditional tea room set in the beautiful and relaxing location of Haulfre Gardens, serving homemade cakes, scones and bara brith. A sheltered sun-trap, with panoramic views across Llandudno including the West Shore and Conwy Estuary.'
     ]
@@ -448,6 +489,23 @@ function getMapImageSrc(mapSetName, imageIndex = 0) {
     : imageIndex;
 
   return imageSet[resolvedIndex] ?? imageSet[0];
+}
+
+function pulseAllDots(stageFrame) {
+  stageFrame.querySelectorAll('.map-position-dot').forEach((dot) => {
+    dot.classList.remove('is-intro-pulsing');
+    dot.style.animationDelay = '';
+  });
+  requestAnimationFrame(() => {
+    let index = 0;
+    stageFrame.querySelectorAll('.map-position-dot').forEach((dot) => {
+      const overlay = dot.closest('.map-positioning-overlay');
+      if (overlay && getComputedStyle(overlay).display === 'none') return;
+      dot.style.animationDelay = `-${(index * 300) % 2500}ms`;
+      dot.classList.add('is-intro-pulsing');
+      index++;
+    });
+  });
 }
 
 function setMapSet(stageFrame, mapSetName, imageIndex = 0) {
@@ -474,8 +532,10 @@ function setMapSet(stageFrame, mapSetName, imageIndex = 0) {
     button.classList.toggle('is-active', button.dataset.mapSetTarget === mapSetName);
   });
 
+  stageFrame.querySelectorAll('.map-hotspot').forEach(h => h.classList.remove('is-active'));
   hideMapInfoPanel(stageFrame);
   syncHistoryMapDots(stageFrame);
+  pulseAllDots(stageFrame);
 }
 
 function syncHistoryMapDots(stageFrame) {
@@ -902,6 +962,9 @@ mapHotspots.forEach((hotspot) => {
     }
 
     const stageFrame = hotspot.closest('.stage-frame');
+    stageFrame?.querySelectorAll('.map-hotspot').forEach(h => h.classList.remove('is-active'));
+    hotspot.classList.add('is-active');
+
     const mapImage = stageFrame?.querySelector('[data-map-image="true"]');
 
     if (mapImage) {
@@ -924,6 +987,7 @@ mapHotspots.forEach((hotspot) => {
         stageFrame.dataset.historyActiveKey = `${imageIndex}`;
         syncHistoryMapDots(stageFrame);
       }
+      pulseAllDots(stageFrame);
 
       const panelCopy = mapSetName === 'history'
         ? historyMapCopy[imageIndex]
@@ -973,6 +1037,7 @@ mapDetailHotspots.forEach((hotspot) => {
         : null;
 
     if (stageFrame && panelCopy) {
+      stageFrame.querySelectorAll('.map-position-dot.is-active').forEach(d => d.classList.remove('is-active'));
       showMapInfoPanel(
         stageFrame,
         panelCopy.title,
@@ -1013,6 +1078,8 @@ fixedMapPositionDots.forEach((dot) => {
                     : null;
 
     if (stageFrame && panelCopy) {
+      stageFrame.querySelectorAll('.map-position-dot.is-active').forEach(d => d.classList.remove('is-active'));
+      dot.classList.add('is-active');
       showMapInfoPanel(
         stageFrame,
         panelCopy.title,
@@ -1032,6 +1099,7 @@ mapInfoCloseButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const stageFrame = button.closest('.stage-frame');
     if (stageFrame) {
+      stageFrame.querySelectorAll('.map-position-dot.is-active').forEach(d => d.classList.remove('is-active'));
       hideMapInfoPanel(stageFrame);
     }
   });
@@ -1130,6 +1198,74 @@ function updatePositioningHud(stageFrame) {
 
 document.querySelectorAll('.stage-frame').forEach(updatePositioningHud);
 document.querySelectorAll('.stage-frame[data-map-set="history"]').forEach(syncHistoryMapDots);
+
+// Hotspot drag-to-position tool
+function updateHotspotHud(stageFrame) {
+  let hud = stageFrame.querySelector('.map-hotspot-hud');
+  if (!hud) {
+    hud = document.createElement('div');
+    hud.className = 'map-hotspot-hud';
+    stageFrame.appendChild(hud);
+  }
+  const sr = stageFrame.getBoundingClientRect();
+  const hotspots = stageFrame.querySelectorAll('.map-legend-hotspots .map-hotspot');
+  hud.innerHTML = '<strong>HOTSPOT POSITIONS</strong>' + Array.from(hotspots).map((h, i) => {
+    const hr = h.getBoundingClientRect();
+    const top   = ((hr.top  - sr.top)   / sr.height * 100).toFixed(2);
+    const right = ((sr.right - hr.right) / sr.width  * 100).toFixed(2);
+    const w     = (hr.width  / sr.width  * 100).toFixed(2);
+    const hh    = (hr.height / sr.height * 100).toFixed(2);
+    return `<div>${i + 1}. top:${top}% right:${right}% w:${w}% h:${hh}%</div>`;
+  }).join('');
+}
+
+document.querySelectorAll('.stage-frame').forEach((stageFrame) => {
+  const hotspots = stageFrame.querySelectorAll('.map-legend-hotspots .map-hotspot');
+  let activeHotspot = null;
+  let dragStartX, dragStartY, startLeft, startTop, didDrag = false;
+
+  function onPointerMove(e) {
+    const dx = e.clientX - dragStartX;
+    const dy = e.clientY - dragStartY;
+    if (!didDrag && Math.abs(dx) < 4 && Math.abs(dy) < 4) return;
+    didDrag = true;
+    const sr = stageFrame.getBoundingClientRect();
+    activeHotspot.style.left  = `${((startLeft + dx) / sr.width  * 100).toFixed(2)}%`;
+    activeHotspot.style.top   = `${((startTop  + dy) / sr.height * 100).toFixed(2)}%`;
+    activeHotspot.style.right = 'auto';
+    updateHotspotHud(stageFrame);
+  }
+
+  function onPointerUp() {
+    if (didDrag) updateHotspotHud(stageFrame);
+    activeHotspot.style.cursor = 'grab';
+    document.removeEventListener('pointermove', onPointerMove);
+    document.removeEventListener('pointerup', onPointerUp);
+    setTimeout(() => { didDrag = false; }, 0);
+    activeHotspot = null;
+  }
+
+  hotspots.forEach((hotspot) => {
+    hotspot.addEventListener('pointerdown', (e) => {
+      e.preventDefault();
+      const sr = stageFrame.getBoundingClientRect();
+      const hr = hotspot.getBoundingClientRect();
+      activeHotspot = hotspot;
+      didDrag = false;
+      dragStartX = e.clientX;
+      dragStartY = e.clientY;
+      startLeft = hr.left - sr.left;
+      startTop  = hr.top  - sr.top;
+      hotspot.style.cursor = 'grabbing';
+      document.addEventListener('pointermove', onPointerMove);
+      document.addEventListener('pointerup', onPointerUp);
+    });
+
+    hotspot.addEventListener('click', (e) => {
+      if (didDrag) e.stopImmediatePropagation();
+    }, true);
+  });
+});
 
 // Debug labels
 screens.forEach((screen) => {
