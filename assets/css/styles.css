@@ -753,10 +753,32 @@ h1 {
   top: 0;
   bottom: 0;
   width: 50%;
-  background: rgba(255, 0, 0, 0.08);
-  border: 3px dashed red;
+  background: transparent;
+  border: none;
   cursor: pointer;
   z-index: 2;
+}
+
+.main-menu-intro {
+  position: absolute;
+  left: 50%;
+  top: 18%;
+  transform: translateX(-50%);
+  width: 36%;
+  z-index: 1;
+  text-align: center;
+  color: #0d1f17;
+  pointer-events: none;
+}
+
+.main-menu-intro p {
+  margin: 0 0 14px;
+  font: 400 1.65rem/1.5 "Avenir Next", "Gill Sans", sans-serif;
+  text-shadow: 0 1px 3px rgba(255,255,255,0.6);
+}
+
+.main-menu-intro strong {
+  font-weight: 700;
 }
 
 .main-menu-btn--left {
@@ -775,8 +797,6 @@ h1 {
   width: 10%;
   height: 22%;
   z-index: 3;
-  background: rgba(0, 0, 255, 0.08);
-  border: 3px dashed blue;
 }
 
 .hotspot-grid {
@@ -1115,6 +1135,11 @@ h1 {
 
 .map-info-panel__body p:last-child {
   margin-bottom: 0;
+}
+
+.map-info-panel--medium-wide {
+  max-width: min(1080px, 78%);
+  grid-template-columns: 180px minmax(0, 720px);
 }
 
 .map-info-panel--wide {
@@ -2407,20 +2432,6 @@ h1 {
   font: 500 11px/1 monospace;
   background: rgba(0, 0, 0, 0.45);
   padding: 3px 7px;
-  border-radius: 4px;
-  pointer-events: none;
-  user-select: none;
-}
-
-.debug-screen-label {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 9999;
-  color: #ff0000;
-  font: 700 15px/1 monospace;
-  background: rgba(0, 0, 0, 0.55);
-  padding: 4px 8px;
   border-radius: 4px;
   pointer-events: none;
   user-select: none;

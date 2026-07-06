@@ -54,6 +54,7 @@ const historyMapCopy = {
   },
   2: {
     title: "Ffynnon Powell / Powell's Well",
+    imageSrc: 'assets/images/ffynnon-powell.jpg',
     panelFixedPosition: { left: 630.609, top: 548.875 },
     body: [
       "Ffynnon Powell, or Powell's Well, is a historic spring on the Great Orme, one of many freshwater sources that would have been vital to the communities who lived and worked on the headland throughout the centuries."
@@ -61,7 +62,9 @@ const historyMapCopy = {
   },
   3: {
     title: 'The Great Orme Copper Mine',
-    panelFixedPosition: { left: 692.531, top: 241.914 },
+    imageSrc: 'assets/images/copper-mine.jpg',
+    panelClassName: 'map-info-panel--medium-wide',
+    panelFixedPosition: { left: 258.531, top: 256.914 },
     body: [
       'Visit the Great Orme Ancient Mines, explore some of the Bronze Age tunnels, and discover how the Bronze Age miners lit fires deep underground to shatter the rock and work the seams of copper ore with primitive stone hammers and animal bones or even antlers as picks.',
       'In the 17th century there was new demand for copper, and mining began again on a grand scale. You can see surface mines and spoil heaps between the summit and the halfway tram station, as the more modern miners first exploited easily accessible seams near the surface, and then deeper excavations underground.'
@@ -122,6 +125,8 @@ const historyMapCopy = {
   },
   9: {
     title: 'Wartime Great Orme',
+    imageSrc: 'assets/images/wartime-great-orme.jpg',
+    panelFixedPosition: { left: 491.901, top: 432.812 },
     panelClassName: 'map-info-panel--wide',
     body: [
       'The gun and searchlight emplacements of the Royal Artillery coastal gunnery school can be explored on foot or viewed from above on the Marine Drive.',
@@ -150,7 +155,7 @@ const historyMapCopy = {
 const geologyMapCopy = {
   1: {
     title: 'Fossils found in Bishop\'s Quarry',
-    imageSrc: 'assets/images/brachiopods.jpg',
+    imageSrc: 'assets/images/fossils.jpg',
     panelFixedPosition: { left: 677.531, top: 286.234 },
     body: [
       'Corals: Corals are marine animals which are often mistaken for plants.',
@@ -352,6 +357,7 @@ const wildlifeAttractionsCopy = {
   },
   2: {
     title: 'The Great Orme Ancient Mine',
+    panelFixedPosition: { left: 242.72, top: 326.823 },
     body: [
       'The copper mines date back to the Bronze Age, and are one of the most astounding archaeological discoveries of recent times.',
       'Open daily mid-March to end of October',
@@ -371,6 +377,7 @@ const wildlifeAttractionsCopy = {
   4: {
     title: 'The Tramway',
     imageSrc: 'assets/images/trams-1.jpg',
+    panelFixedPosition: { left: 378.883, top: 254.016 },
     body: [
       'Great Britain\'s only remaining cable operated street tramway runs from Victoria Station in Church Walks, Llandudno, to the Great Orme Summit, with passengers changing cars at the Halfway Station.',
       'Open mid-March to early November 10am - 5.45pm daily',
@@ -426,12 +433,14 @@ const wildlifeAttractionsCopy = {
   },
   12: {
     title: 'Pitch & Putt Golf Course',
+    panelFixedPosition: { left: 267.055, top: 465.047 },
     body: [
       "A scenic pitch and putt golf course on the Great Orme with spectacular views over Llandudno and the bay."
     ]
   },
   13: {
     title: 'Haulfre Gardens',
+    panelFixedPosition: { left: 253.273, top: 451.047 },
     body: [
       "Haulfre Gardens is a beautiful terraced public garden on the slopes of the Great Orme, offering panoramic views across Llandudno including the West Shore and Conwy Estuary."
     ]
@@ -802,7 +811,8 @@ function fitStageToViewport() {
 function addQuestionProgressLabels() {
   const questionProgressConfig = [
     { prefix: 'history-test', total: 10 },
-    { prefix: 'info', total: 7 }
+    { prefix: 'info', total: 7 },
+    { prefix: 'wildlife-intro', total: 2 }
   ];
 
   screens.forEach((screen) => {
@@ -1267,21 +1277,16 @@ document.querySelectorAll('.stage-frame').forEach((stageFrame) => {
   });
 });
 
-// Debug labels
-screens.forEach((screen) => {
-  const label = document.createElement('div');
-  label.className = 'debug-screen-label';
-  label.textContent = screen.id;
-  screen.appendChild(label);
-});
 
 // Build timestamp
-fetch('build-info.txt?nocache=' + Date.now())
-  .then(r => r.text())
-  .then(text => {
-    const el = document.createElement('div');
-    el.className = 'build-timestamp';
-    el.textContent = text.trim();
-    document.body.appendChild(el);
-  })
-  .catch(() => {});
+if (location.protocol !== 'file:') {
+  fetch('build-info.txt?nocache=' + Date.now())
+    .then(r => r.text())
+    .then(text => {
+      const el = document.createElement('div');
+      el.className = 'build-timestamp';
+      el.textContent = text.trim();
+      document.body.appendChild(el);
+    })
+    .catch(() => {});
+}
