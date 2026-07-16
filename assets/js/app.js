@@ -24,6 +24,7 @@ const mapImageSets = {
     'assets/images/map-page_winter.png'
   ],
   geology: [
+    'assets/images/Geology-map-page_0.png',
     'assets/images/Geology-map-page_1.png',
     'assets/images/Geology-map-page_2.png',
     'assets/images/Geology-map-page_3.png',
@@ -31,6 +32,7 @@ const mapImageSets = {
     'assets/images/Geology-map-page_5.png'
   ],
   history: [
+    'assets/images/History-map-page_0.png',
     'assets/images/History-map-page_1.png',
     'assets/images/History-map-page_2.png',
     'assets/images/History-map-page_3.png',
@@ -47,7 +49,7 @@ const historyMapCopy = {
   1: {
     title: 'A Stone Age burial chamber',
     imageSrc: 'assets/images/stone-age-burial-chamber.jpg',
-    panelFixedPosition: { left: 690.537, top: 350.839 },
+    panelFixedPosition: { left: 569.537, top: 350.839 },
     body: [
       '“Llety\'r Filiast” (literally translated as “lair of the female greyhound”) is a spectacular example of a Stone Age cromlech or burial chamber approximately 10 minutes walk from the visitor centre, near the Great Orme Ancient Mines.'
     ]
@@ -55,7 +57,7 @@ const historyMapCopy = {
   2: {
     title: "Ffynnon Powell / Powell's Well",
     imageSrc: 'assets/images/ffynnon-powell.jpg',
-    panelFixedPosition: { left: 630.609, top: 548.875 },
+    panelFixedPosition: { left: 581.609, top: 548.875 },
     body: [
       "Ffynnon Powell, or Powell's Well, is a historic spring on the Great Orme, one of many freshwater sources that would have been vital to the communities who lived and worked on the headland throughout the centuries."
     ]
@@ -64,7 +66,7 @@ const historyMapCopy = {
     title: 'The Great Orme Copper Mine',
     imageSrc: 'assets/images/copper-mine.jpg',
     panelClassName: 'map-info-panel--medium-wide',
-    panelFixedPosition: { left: 258.531, top: 256.914 },
+    panelFixedPosition: { left: 258.531, top: 273.914 },
     body: [
       'Visit the Great Orme Ancient Mines, explore some of the Bronze Age tunnels, and discover how the Bronze Age miners lit fires deep underground to shatter the rock and work the seams of copper ore with primitive stone hammers and animal bones or even antlers as picks.',
       'In the 17th century there was new demand for copper, and mining began again on a grand scale. You can see surface mines and spoil heaps between the summit and the halfway tram station, as the more modern miners first exploited easily accessible seams near the surface, and then deeper excavations underground.'
@@ -73,7 +75,7 @@ const historyMapCopy = {
   4: {
     title: 'Pen Dinas Iron Age hill-fort & rocking stone',
     imageSrc: 'assets/images/pen-dinas.jpg',
-    panelFixedPosition: { left: 508.448, top: 244.787 },
+    panelFixedPosition: { left: 394.448, top: 277.787 },
     body: [
       'This would have been an ideal place for such a settlement, being protected on three sides by steep cliffs, with only one side needing the construction of a built double bank and ditch defence. Inside the fort there was a large community of over 60 roundhouses.',
       'The \'Rocking Stone\', is believed to be a way of trying people of certain crimes. The prisoner was stood upon the stone blindfolded – if it rocked they were innocent; if it stayed still they would have been thrown down the cliffs!'
@@ -82,7 +84,7 @@ const historyMapCopy = {
   5: {
     title: 'Medieval Ridge and Furrow Agriculture',
     imageSrc: 'assets/images/ridge-and-furrow-1.jpg',
-    panelFixedPosition: { left: 692.531, top: 582.914 },
+    panelFixedPosition: { left: 573.531, top: 582.914 },
     body: [
       'Near St Tudno\'s church are extensive and easily visible remains of the medieval “ridge and furrow” agricultural system, where individual families ploughed strips of land in an open field system.',
       'The abandoning of growing crops in favour of grazing animals in later medieval times has preserved this feature.'
@@ -109,7 +111,7 @@ const historyMapCopy = {
   8: {
     title: 'The Tramway',
     imageSrc: 'assets/images/trams-3.jpg',
-    panelFixedPosition: { left: 679.531, top: 273 },
+    panelFixedPosition: { left: 574.531, top: 273 },
     body: [
       'Great Britain\'s only remaining cable-operated street tramway was built in 1902, and runs from Victoria Station in Church Walks, Llandudno, to the Great Orme Summit.',
       'Passengers change tramcars, each named after a Welsh saint, at the Halfway Station.'
@@ -156,7 +158,7 @@ const geologyMapCopy = {
   1: {
     title: 'Fossils found in Bishop\'s Quarry',
     imageSrc: 'assets/images/fossils.jpg',
-    panelFixedPosition: { left: 677.531, top: 286.234 },
+    panelFixedPosition: { left: 581.531, top: 286.234 },
     body: [
       'Corals: Corals are marine animals which are often mistaken for plants.',
       'Brachiopods: Brachiopods have shells and a stalk attaching them to the floor.',
@@ -176,14 +178,14 @@ const geologyMapCopy = {
   3: {
     title: 'Rock Contours',
     imageSrc: 'assets/images/cliff-formation.jpg',
-    panelFixedPosition: { left: 625.531, top: 415.438 },
+    panelFixedPosition: { left: 588.531, top: 367.438 },
     body: [
       'These layers of rock have been twisted and tilted by underground volcanic forces. As the sea wore away the cliff face, the layers, or “stratifications”, have been revealed.'
     ]
   },
   4: {
     title: 'Copper Mineral Vein',
-    panelFixedPosition: { left: 657.531, top: 335 },
+    panelFixedPosition: { left: 588.531, top: 367.438 },
     body: [
       'This coloured stripe in the rock is copper ore, which has been mined here since the Bronze Age; you can go round the ancient mines and see how important copper once was.'
     ]
@@ -191,7 +193,7 @@ const geologyMapCopy = {
   5: {
     title: 'Glacial Erratics',
     imageSrc: 'assets/images/erratic-2.jpg',
-    panelFixedPosition: { left: 653.531, top: 395.438 },
+    panelFixedPosition: { left: 551.531, top: 395.438 },
     body: [
       'These rocks were carried here inside Ice Age glaciers and dropped as the ice melted; their unusual shapes have inspired local superstitions, and many have been given special names.'
     ]
@@ -223,6 +225,7 @@ const wildlifeSummerCopy = {
   4: {
     title: 'Summer Icon 4',
     imageSrc: 'assets/images/thrift.jpg',
+    panelFixedPosition: { left: 143.488, top: 548 },
     body: [
       'Beginning to flower in late spring and continuing throughout the first 2 months of summer, rose pink thrift plants carpet the grasslands.'
     ]
@@ -316,6 +319,7 @@ const wildlifeAutumnCopy = {
   4: {
     title: 'Autumn Icon 4',
     imageSrc: 'assets/images/fungi.jpg',
+    panelFixedPosition: { left: 296.22, top: 592.006 },
     body: [
       'The woodlands are rich with mosses, fungi and lichens, and red campion flowers can be seen up to October.'
     ]
@@ -493,11 +497,7 @@ const wildlifeEatCopy = {
 
 function getMapImageSrc(mapSetName, imageIndex = 0) {
   const imageSet = mapImageSets[mapSetName] ?? mapImageSets.wildlife;
-  const resolvedIndex = ['geology', 'history'].includes(mapSetName)
-    ? Math.max(imageIndex - 1, 0)
-    : imageIndex;
-
-  return imageSet[resolvedIndex] ?? imageSet[0];
+  return imageSet[imageIndex] ?? imageSet[0];
 }
 
 function pulseAllDots(stageFrame) {
@@ -561,7 +561,7 @@ function syncHistoryMapDots(stageFrame) {
 }
 
 function positionMapInfoPanel(stageFrame, panel, anchorElement, panelPosition = '', panelOffset = null, panelFixedPosition = null) {
-  if (!stageFrame || !panel || !anchorElement) {
+  if (!stageFrame || !panel || (!anchorElement && !panelFixedPosition)) {
     panel?.style.removeProperty('left');
     panel?.style.removeProperty('top');
     panel?.style.removeProperty('bottom');
@@ -842,7 +842,12 @@ function addQuestionProgressLabels() {
     const progress = document.createElement('span');
     progress.className = 'question-progress';
     progress.textContent = `${suffix} of ${matchedConfig.total}`;
-    copyBlock.appendChild(progress);
+    const answerOptions = copyBlock.querySelector('.answer-options');
+    if (answerOptions) {
+      answerOptions.appendChild(progress);
+    } else {
+      copyBlock.appendChild(progress);
+    }
   });
 }
 
@@ -982,12 +987,12 @@ mapHotspots.forEach((hotspot) => {
       const imageIndex = Number(hotspot.dataset.mapIndex || 0);
 
       if (mapSetName === 'wildlife' && imageIndex === 2) {
-        setMapSet(stageFrame, 'geology', 1);
+        setMapSet(stageFrame, 'geology');
         return;
       }
 
       if (mapSetName === 'wildlife' && imageIndex === 3) {
-        setMapSet(stageFrame, 'history', 1);
+        setMapSet(stageFrame, 'history');
         return;
       }
 
@@ -1003,7 +1008,9 @@ mapHotspots.forEach((hotspot) => {
         ? historyMapCopy[imageIndex]
         : mapSetName === 'geology'
           ? geologyMapCopy[imageIndex]
-          : null;
+          : mapSetName === 'wildlife' && imageIndex === 1
+            ? wildlifeEatCopy[1]
+            : null;
 
       if (panelCopy) {
         showMapInfoPanel(
@@ -1281,8 +1288,9 @@ document.querySelectorAll('.stage-frame').forEach((stageFrame) => {
 // Build timestamp
 if (location.protocol !== 'file:') {
   fetch('build-info.txt?nocache=' + Date.now())
-    .then(r => r.text())
+    .then(r => r.ok ? r.text() : Promise.reject())
     .then(text => {
+      if (text.trim().startsWith('<')) return;
       const el = document.createElement('div');
       el.className = 'build-timestamp';
       el.textContent = text.trim();

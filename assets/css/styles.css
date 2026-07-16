@@ -303,9 +303,8 @@ h1 {
 }
 
 .question-progress {
-  position: absolute;
-  right: 32px;
-  bottom: 20px;
+  margin-left: auto;
+  align-self: center;
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1;
@@ -313,15 +312,21 @@ h1 {
 }
 
 .screen:is([id^="history-test"], [id^="info"], [id^="wildlife"]) .test-page-copy {
-  padding: 28px 32px 36px;
+  padding: 42px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
 }
 
+.screen:is(#wildlife-intro-2, #wildlife-intro-2-cy) .test-page-copy {
+  top: calc(20% + 20px);
+  height: 560px;
+}
+
+
 .screen:is(#info-3, #info-3-cy) .test-page-copy {
   top: 235px;
-  padding: 0 32px 36px;
+  padding: 47px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
@@ -329,7 +334,7 @@ h1 {
 
 .screen:is(#history-test-2, #history-test-2-cy) .test-page-copy {
   top: 193px;
-  padding: 28px 32px 36px;
+  padding: 22px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
@@ -337,7 +342,7 @@ h1 {
 
 .screen:is(#history-test-3, #history-test-3-cy) .test-page-copy {
   top: 244px;
-  padding: 28px 32px 36px;
+  padding: 17px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
@@ -345,7 +350,7 @@ h1 {
 
 .screen:is(#history-test-4, #history-test-4-cy) .test-page-copy {
   top: 136px;
-  padding: 28px 32px 36px;
+  padding: 82px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
@@ -353,7 +358,7 @@ h1 {
 
 .screen:is(#history-test-5, #history-test-5-cy) .test-page-copy {
   top: 155px;
-  padding: 28px 32px 36px;
+  padding: 64px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
@@ -361,7 +366,7 @@ h1 {
 
 .screen:is(#history-test-6, #history-test-6-cy) .test-page-copy {
   top: 146px;
-  padding: 28px 32px 36px;
+  padding: 50px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
@@ -369,7 +374,7 @@ h1 {
 
 .screen:is(#history-test-7, #history-test-7-cy) .test-page-copy {
   top: 231px;
-  padding: 28px 32px 36px;
+  padding: 39px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
@@ -377,7 +382,7 @@ h1 {
 
 .screen:is(#history-test-8, #history-test-8-cy) .test-page-copy {
   top: 169px;
-  padding: 28px 32px 36px;
+  padding: 54px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
@@ -385,7 +390,7 @@ h1 {
 
 .screen:is(#history-test-9, #history-test-9-cy) .test-page-copy {
   top: 153px;
-  padding: 28px 32px 36px;
+  padding: 74px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
@@ -393,15 +398,15 @@ h1 {
 
 .screen:is(#history-test-10, #history-test-10-cy) .test-page-copy {
   top: 229px;
-  padding: 28px 32px 36px;
+  padding: 22px 32px 36px;
   border-radius: 24px;
   width: 1094px;
-  height: 485px;
+  height: 520px;
 }
 
 .screen:is(#info, #info-cy) .test-page-copy {
   top: 246px;
-  padding: 28px 32px 36px;
+  padding: 46px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
@@ -409,7 +414,7 @@ h1 {
 
 .screen:is(#info-2, #info-2-cy) .test-page-copy {
   top: 172px;
-  padding: 28px 32px 36px;
+  padding: 81px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
@@ -417,7 +422,7 @@ h1 {
 
 .screen:is(#info-4, #info-4-cy) .test-page-copy {
   top: 211px;
-  padding: 28px 32px 36px;
+  padding: 108px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
@@ -425,7 +430,7 @@ h1 {
 
 .screen:is(#info-5, #info-5-cy) .test-page-copy {
   top: 187px;
-  padding: 28px 32px 36px;
+  padding: 76px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
@@ -433,14 +438,14 @@ h1 {
 
 .screen:is(#info-6, #info-6-cy) .test-page-copy {
   top: 135px;
-  padding: 28px 32px 36px;
+  padding: 94px 32px 36px;
   border-radius: 24px;
   width: 1094px;
   height: 485px;
 }
 
 .screen:is(#info-7, #info-7-cy) .test-page-copy {
-  top: 232px;
+  top: 294px;
   position: absolute;
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
@@ -457,6 +462,11 @@ h1 {
 .screen:is(#info-7, #info-7-cy) .test-page-copy h2 {
   grid-column: 1 / -1;
   margin-bottom: 0;
+}
+
+.screen:is(#info-7, #info-7-cy) .question-progress {
+  grid-column: 1 / -1;
+  text-align: right;
 }
 
 .screen:is(#info-7, #info-7-cy) .info-7-left {
@@ -739,6 +749,10 @@ h1 {
 .screen:is(#wildlife-intro-2, #wildlife-intro-2-cy) .test-page-copy {
   display: flex;
   flex-direction: column;
+}
+
+.screen:is(#wildlife-intro-2, #wildlife-intro-2-cy) .test-page-copy h2 {
+  margin-bottom: 6px;
 }
 
 .screen:is(#wildlife-intro-2, #wildlife-intro-2-cy) .test-page-scroll-body {
@@ -1088,10 +1102,29 @@ h1 {
 }
 
 .map-info-panel__title {
+  display: none;
+}
+
+.stage-frame[data-map-set="wildlife"] .map-info-panel__title {
+  display: block;
   grid-column: 1 / -1;
   margin: 0 0 6px;
   font: 700 2rem/1.05 "Avenir Next Condensed", "Gill Sans", sans-serif;
   text-transform: uppercase;
+}
+
+.stage-frame[data-map-set="wildlife"][data-map-image-index="5"] .map-info-panel__title,
+.stage-frame[data-map-set="wildlife"][data-map-image-index="6"] .map-info-panel__title,
+.stage-frame[data-map-set="wildlife"][data-map-image-index="7"] .map-info-panel__title,
+.stage-frame[data-map-set="wildlife"][data-map-image-index="8"] .map-info-panel__title {
+  display: none;
+}
+
+.stage-frame[data-map-set="wildlife"][data-map-image-index="5"] .map-info-panel,
+.stage-frame[data-map-set="wildlife"][data-map-image-index="6"] .map-info-panel,
+.stage-frame[data-map-set="wildlife"][data-map-image-index="7"] .map-info-panel,
+.stage-frame[data-map-set="wildlife"][data-map-image-index="8"] .map-info-panel {
+  padding-top: 64px;
 }
 
 .map-info-panel__media {
