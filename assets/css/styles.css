@@ -749,6 +749,7 @@ h1 {
 .screen:is(#wildlife-intro-2, #wildlife-intro-2-cy) .test-page-copy {
   display: flex;
   flex-direction: column;
+  padding-top: 24px;
 }
 
 .screen:is(#wildlife-intro-2, #wildlife-intro-2-cy) .test-page-copy h2 {
@@ -760,6 +761,14 @@ h1 {
   width: 100%;
   min-width: 0;
   overflow-y: auto;
+}
+
+.screen:is(#wildlife-intro-2, #wildlife-intro-2-cy) .wildlife-intro-row {
+  margin-bottom: 14px;
+}
+
+.screen:is(#wildlife-intro-2, #wildlife-intro-2-cy) .test-page-scroll-body p {
+  line-height: 1.32;
 }
 
 .main-menu-btn {
